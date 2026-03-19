@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --no-import-alias --use-npm --turbopack)",
+      "Bash(npm init -y)",
+      "Bash(sed -i '' 's/\"\"name\"\": \"\"BidSentra\"\"/\"\"name\"\": \"\"bidsentra\"\"/' package.json)",
+      "Bash(npm install next@latest react@latest react-dom@latest)",
+      "Bash(npm install -D typescript @types/react @types/node tailwindcss @tailwindcss/postcss postcss)",
+      "Bash(npm install framer-motion lucide-react)",
+      "Bash(cp /Users/bartlomiejdziegelewski/Downloads/BidSentra_logo_poziom/BidSentra_logo_poziom_RGB_podst.png /Users/bartlomiejdziegelewski/Documents/BidSentra/public/images/logo.png)",
+      "Bash(cp /Users/bartlomiejdziegelewski/Downloads/BidSentra_logo_poziom/BidSentra_logo_poziom_RGB_white.png /Users/bartlomiejdziegelewski/Documents/BidSentra/public/images/logo-white.png)",
+      "Bash(cp /Users/bartlomiejdziegelewski/Downloads/BidSentra_logo_poziom/BidSentra_logo_poziom_RGB_inwersja.png /Users/bartlomiejdziegelewski/Documents/BidSentra/public/images/logo-inverse.png)",
+      "Bash(npm install clsx)",
+      "Bash(npx next build)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(git init)",
+      "Bash(gh auth status)",
+      "Bash(brew install gh)",
+      "Bash(gh auth login --web --git-protocol https)",
+      "Bash(git add -A)"
+    ]
+  }
+}
