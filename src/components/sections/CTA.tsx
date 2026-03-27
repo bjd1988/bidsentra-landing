@@ -36,14 +36,42 @@ export function CTA({
   formLabels,
   bottomNote,
 }: CTAProps) {
-  const [formState, setFormState] = useState<"idle" | "sending" | "sent">(
-    "idle"
-  );
+  const [formState, setFormState] = useState<
+    "idle" | "sending" | "sent" | "error"
+  >("idle");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormState("sending");
-    setTimeout(() => setFormState("sent"), 1500);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    formData.append("_subject", "Nowa wiadomosc ze strony BidSentra");
+    formData.append("_template", "table");
+    formData.append("_captcha", "false");
+
+    try {
+      const response = await fetch(
+        `https://formsubmit.co/ajax/${encodeURIComponent(emailAddress)}`,
+        {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      setFormState("sent");
+      form.reset();
+    } catch {
+      setFormState("error");
+    }
   };
 
   return (
@@ -111,13 +139,38 @@ export function CTA({
                     {formLabels.thankYouMessage}
                   </p>
                 </div>
+              ) : formState === "error" ? (
+                <div className="text-center py-8">
+                  <h3 className="text-white text-lg font-bold mb-2">
+                    Nie udało się wysłać wiadomości
+                  </h3>
+                  <p className="text-white/70 text-sm mb-5">
+                    Spróbuj ponownie za chwilę albo napisz bezpośrednio na{" "}
+                    <a
+                      href={`mailto:${emailAddress}`}
+                      className="text-lime hover:text-lime-dark transition-colors"
+                    >
+                      {emailAddress}
+                    </a>
+                    .
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setFormState("idle")}
+                    className="inline-flex items-center justify-center rounded-lg bg-lime px-5 py-3 text-sm font-bold text-text-dark transition-colors hover:bg-lime-dark"
+                  >
+                    Wróć do formularza
+                  </button>
+                </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  <input type="hidden" name="_honey" tabIndex={-1} autoComplete="off" />
                   <div>
                     <label className="text-xs text-white/60 font-medium block mb-1.5">
                       {formLabels.name}
                     </label>
                     <input
+                      name="name"
                       type="text"
                       required
                       className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/30 text-sm focus:outline-none focus:ring-2 focus:ring-mid-teal/50 focus:border-mid-teal transition-colors"
@@ -129,6 +182,7 @@ export function CTA({
                       {formLabels.email}
                     </label>
                     <input
+                      name="email"
                       type="email"
                       required
                       className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/30 text-sm focus:outline-none focus:ring-2 focus:ring-mid-teal/50 focus:border-mid-teal transition-colors"
@@ -140,7 +194,9 @@ export function CTA({
                       {formLabels.message}
                     </label>
                     <textarea
+                      name="message"
                       rows={4}
+                      required
                       className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/30 text-sm focus:outline-none focus:ring-2 focus:ring-mid-teal/50 focus:border-mid-teal transition-colors resize-none"
                       placeholder={formLabels.messagePlaceholder}
                     />
