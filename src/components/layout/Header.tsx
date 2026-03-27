@@ -32,16 +32,18 @@ export function Header({ logo, navLinks, ctaButtonText }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between">
         <a
           href="#"
-          className="flex items-center rounded-2xl bg-white/96 px-3 py-2 shadow-sm ring-1 ring-white/70 transition-transform duration-300 hover:scale-[1.01]"
+          className="flex items-center rounded-2xl bg-white/96 px-2.5 py-2 md:px-3 md:py-2.5 shadow-sm ring-1 ring-white/70 transition-transform duration-300 hover:scale-[1.01]"
         >
-          <Image
-            src={withBasePath(logo)}
-            alt="BidSentra"
-            width={940}
-            height={192}
-            className="h-11 md:h-14 w-auto"
-            priority
-          />
+          <div className="w-[180px] h-10 md:w-[320px] md:h-16 overflow-hidden">
+            <Image
+              src={withBasePath(logo)}
+              alt="BidSentra"
+              width={1684}
+              height={1191}
+              className="h-full w-full object-cover object-center"
+              priority
+            />
+          </div>
         </a>
 
         {/* Desktop nav */}
