@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/base-path";
 
 interface FooterProps {
   logoWhite: string;
@@ -25,7 +26,7 @@ export function Footer({
           {/* Brand */}
           <div>
             <Image
-              src={logoWhite}
+              src={withBasePath(logoWhite)}
               alt="BidSentra"
               width={140}
               height={36}

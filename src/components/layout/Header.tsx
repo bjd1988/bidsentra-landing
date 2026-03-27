@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import { withBasePath } from "@/lib/base-path";
 
 interface HeaderProps {
   logo: string;
@@ -34,7 +35,7 @@ export function Header({ logo, navLinks, ctaButtonText }: HeaderProps) {
           className="flex items-center rounded-2xl bg-white/96 px-3 py-2 shadow-sm ring-1 ring-white/70 transition-transform duration-300 hover:scale-[1.01]"
         >
           <Image
-            src={logo}
+            src={withBasePath(logo)}
             alt="BidSentra"
             width={940}
             height={192}
