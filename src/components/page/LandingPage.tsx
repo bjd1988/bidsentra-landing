@@ -36,7 +36,7 @@ export function LandingPage({ locale }: LandingPageProps) {
         ctaHref={headerConfig.ctaHref}
         languageLinks={headerConfig.languageLinks}
       />
-      <main>
+      <main lang={locale}>
         <Hero {...bundle.hero} />
         <Stats items={bundle.stats.items} />
         <CostCalculator {...bundle.costCalculator} />

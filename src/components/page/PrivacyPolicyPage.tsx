@@ -26,7 +26,7 @@ export function PrivacyPolicyPage({ locale }: PrivacyPolicyPageProps) {
         ctaHref={headerConfig.ctaHref}
         languageLinks={headerConfig.languageLinks}
       />
-      <main className="min-h-screen bg-slate-50 text-slate-900">
+      <main lang={locale} className="min-h-screen bg-slate-50 text-slate-900">
         <section className="bg-dark-teal pt-36 pb-16 px-5 md:px-8">
           <div className="max-w-5xl mx-auto">
             <span className="inline-flex rounded-full border border-white/15 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-lime">
@@ -82,7 +82,10 @@ export function PrivacyPolicyPage({ locale }: PrivacyPolicyPageProps) {
               </div>
             </aside>
 
-            <article className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm md:p-10">
+            <article
+              lang={locale}
+              className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm md:p-10"
+            >
               <div className="space-y-10">
                 {privacy.sections.map((section) => (
                   <section key={section.title}>
