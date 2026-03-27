@@ -4,9 +4,8 @@ backend:
   name: github
   repo: bjd1988/bidsentra-landing
   branch: main
-  # After deploying cms-oauth-proxy, set:
-  # base_url: https://your-worker.your-account.workers.dev
-  # auth_endpoint: auth
+  base_url: https://bidsentra-decap-proxy.145884.workers.dev
+  auth_endpoint: auth
 
 media_folder: "public/images"
 public_folder: "/images"
