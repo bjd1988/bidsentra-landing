@@ -1,0 +1,489 @@
+{
+  "locale": "de",
+  "metadata": {
+    "homeTitle": "BidSentra – Mehr Ausschreibungen mit KI gewinnen",
+    "homeDescription": "BidSentra ist eine KI-Plattform, die die Analyse von Ausschreibungsunterlagen automatisiert, konforme Angebote erstellt und die Gewinnwahrscheinlichkeit bewertet.",
+    "privacyTitle": "Datenschutzerklärung | BidSentra",
+    "privacyDescription": "Informationen zur Verarbeitung personenbezogener Daten bei der Nutzung der BidSentra-Website und des Kontaktformulars."
+  },
+  "site": {
+    "siteName": "BidSentra",
+    "logo": "/images/logo-inverse.png",
+    "logoWhite": "/images/logo-inverse.png",
+    "navLinks": [
+      { "href": "#jak-dziala", "label": "So funktioniert es" },
+      { "href": "#korzysci", "label": "Vorteile" },
+      { "href": "#cennik", "label": "Preise" },
+      { "href": "#faq", "label": "FAQ" }
+    ],
+    "ctaButtonText": "Demo buchen",
+    "footerDescription": "Ihre zentrale Schaltstelle für smarteres Bieten. KI-gestützte B2B-Ausschreibungsautomatisierung für den polnischen Markt.",
+    "footerCopyright": "© 2026 BidSentra · Up To You Sp. z o.o.",
+    "footerUrl": "bidsentra.pl",
+    "footerColumns": [
+      {
+        "title": "PRODUKT",
+        "links": [
+          { "href": "#jak-dziala", "label": "So funktioniert es" },
+          { "href": "#korzysci", "label": "Vorteile" },
+          { "href": "#cennik", "label": "Preise" },
+          { "href": "#faq", "label": "FAQ" }
+        ]
+      },
+      {
+        "title": "BRANCHEN",
+        "links": [
+          { "href": "#sektory", "label": "Bau und Ingenieurwesen" },
+          { "href": "#sektory", "label": "IT und Software" },
+          { "href": "#sektory", "label": "Energie und Erneuerbare" },
+          { "href": "#sektory", "label": "Vergabeberatung" }
+        ]
+      },
+      {
+        "title": "UNTERNEHMEN",
+        "links": [
+          { "href": "#kontakt", "label": "Kontakt" },
+          { "href": "/de/datenschutz", "label": "Datenschutzerklärung" },
+          { "href": "#", "label": "AGB" },
+          { "href": "#", "label": "Publikationen" }
+        ]
+      }
+    ]
+  },
+  "hero": {
+    "badge": "100 % konform mit dem polnischen Vergaberecht",
+    "titleWhite": "Mehr Ausschreibungen gewinnen",
+    "titleHighlight": "in der halben Zeit.",
+    "description": "BidSentra ist eine KI-Plattform, die die Analyse von Ausschreibungsunterlagen automatisiert, vergaberechtskonforme Angebote erstellt und Ihre Gewinnchance bewertet, bevor der Wettbewerb die Spezifikation zu Ende gelesen hat.",
+    "ctaPrimary": "Demo buchen",
+    "ctaSecondary": "So funktioniert es",
+    "card": {
+      "title": "BidSentra · Ausschreibungsanalyse",
+      "rows": [
+        { "label": "Ausschreibung:", "value": "Modernisierung des IT-Netzes" },
+        { "label": "Wert:", "value": "2.400.000 PLN" }
+      ],
+      "bidScore": "82 / 100",
+      "pzpCompliance": "Hoch",
+      "docCompleteness": 87,
+      "winChance": 73,
+      "bidScoreLabel": "Bid Score™",
+      "complianceLabel": "Vergaberechtskonformität",
+      "docCompletenessLabel": "Vollständigkeit der Unterlagen",
+      "winChanceLabel": "Gewinnchance (ML)"
+    }
+  },
+  "stats": {
+    "items": [
+      { "value": "50%", "label": "Weniger Zeit für Angebote" },
+      { "value": "80%", "label": "Weniger formale Fehler" },
+      { "value": "+30%", "label": "Höhere Erfolgsquote" }
+    ]
+  },
+  "costCalculator": {
+    "title": "Was kostet Sie eine verlorene Ausschreibung?",
+    "fields": [
+      { "label": "Teamzeit", "key": "teamTime", "defaultValue": 19900 },
+      { "label": "Arbeitskosten", "key": "laborCost", "defaultValue": 3100 },
+      { "label": "Verlorene Marge", "key": "lostMargin", "defaultValue": 8500 }
+    ],
+    "totalLabel": "Gesamtkosten",
+    "resetLabel": "Werte zurücksetzen",
+    "localeTag": "de-DE",
+    "currencyCode": "PLN",
+    "currencySuffix": "PLN"
+  },
+  "problem": {
+    "sectionLabel": "Welches Problem wir lösen",
+    "title": "Ausschreibungen verschlingen Zeit und Ressourcen",
+    "subtitle": "Unternehmen, die BidSentra nutzen, reichen Angebote im Schnitt 4 Tage schneller ein als ihre Wettbewerber.",
+    "traditionalLabel": "Traditioneller Prozess",
+    "bidsentraLabel": "BidSentra",
+    "painPoints": [
+      {
+        "icon": "FileText",
+        "title": "Hunderte Seiten Unterlagen",
+        "desc": "Leistungsverzeichnisse, technische Programme, Erklärungen und Anforderungen müssen bei jeder Ausschreibung manuell geprüft werden."
+      },
+      {
+        "icon": "Clock",
+        "title": "Wochen für ein einziges Angebot",
+        "desc": "Die Erstellung eines Angebots dauert oft mehrere Tage bis Wochen und bindet das gesamte Angebotsteam."
+      },
+      {
+        "icon": "AlertTriangle",
+        "title": "Formale Fehler führen zur Ablehnung",
+        "desc": "Ein fehlendes Dokument oder eine nicht erfüllte Anforderung kann die gesamte Arbeit zunichtemachen und den Auftrag kosten."
+      },
+      {
+        "icon": "RefreshCw",
+        "title": "Immer wieder von vorne beginnen",
+        "desc": "Wissen aus früheren Angeboten wird selten systematisch wiederverwendet, daher startet fast jede Ausschreibung bei null."
+      }
+    ],
+    "solutions": [
+      "Wesentliche Anforderungen in wenigen Minuten extrahiert",
+      "Automatische Prüfung von Qualifikationen, Referenzen und Pflichtunterlagen",
+      "Sofortige Erkennung von Lücken und Widersprüchen in der Spezifikation",
+      "Keine formalen Fehler. Vollständige Konformität mit den Anforderungen"
+    ],
+    "marketStats": [
+      { "val": "200k+", "lbl": "Ausschreibungen pro Jahr in Polen" },
+      { "val": "~60%", "lbl": "Angebote enthalten formale Fehler" },
+      { "val": "3–6 Wo.", "lbl": "typische Angebotserstellung" },
+      { "val": "PPL", "lbl": "volle Rechtskonformität" }
+    ]
+  },
+  "howItWorks": {
+    "sectionLabel": "So funktioniert es",
+    "title": "Von den Unterlagen zum fertigen Angebot in 4 Schritten",
+    "subtitle": "BidSentra führt Ihr Team durch den gesamten Prozess, von der Analyse der Ausschreibung bis zum abgabefertigen Angebot.",
+    "steps": [
+      {
+        "num": "01",
+        "icon": "Upload",
+        "title": "Unterlagen hochladen",
+        "desc": "Fügen Sie den Ausschreibungslink ein oder laden Sie die Unterlagen hoch. BidSentra kann Dokumente auch aus BZP, TED und e-Zamówienia abrufen."
+      },
+      {
+        "num": "02",
+        "icon": "Brain",
+        "title": "KI analysiert die Anforderungen",
+        "desc": "Die NLP/LLM-Engine extrahiert rechtliche, technische und finanzielle Kernanforderungen und markiert Risiken."
+      },
+      {
+        "num": "03",
+        "icon": "BarChart3",
+        "title": "Bid Score™ prüfen",
+        "desc": "Das ML-Modul bewertet Attraktivität und Gewinnchance anhand Ihrer Daten und relevanter Marktparameter."
+      },
+      {
+        "num": "04",
+        "icon": "FileOutput",
+        "title": "Angebot generieren",
+        "desc": "Der AI Draft Generator erstellt ein vollständiges, konformes Angebot auf Basis Ihrer Referenzen, Zertifikate und Vorlagen."
+      }
+    ]
+  },
+  "features": {
+    "sectionLabel": "Kernfunktionen",
+    "title": "Technologie, die die Spielregeln verändert",
+    "subtitle": "BidSentra verbindet fortschrittliche KI mit praktischem Know-how im polnischen Vergabemarkt.",
+    "items": [
+      {
+        "icon": "Search",
+        "title": "Semantische Dokumentenanalyse (NLP)",
+        "desc": "Das System versteht den Kontext rechtlicher Klauseln, klassifiziert Anforderungen und erkennt Risiken in Ausschreibungsunterlagen automatisch.",
+        "tag": "AI / NLP"
+      },
+      {
+        "icon": "FileEdit",
+        "title": "AI Draft Generator",
+        "desc": "Erstellt automatisch Angebotsstruktur und konforme Inhalte, indem Ausschreibungsdaten mit Ihren Referenzen und Zertifikaten verknüpft werden.",
+        "tag": "RAG-Architektur"
+      },
+      {
+        "icon": "BarChart3",
+        "title": "Bid Score™ Bewertung",
+        "desc": "Ein Machine-Learning-Modell unterstützt bessere Angebotsentscheidungen auf Basis historischer und kontextbezogener Daten.",
+        "tag": "Machine Learning"
+      },
+      {
+        "icon": "Link2",
+        "title": "ERP / CRM / BIM Integrationen",
+        "desc": "Eine offene API verbindet bestehende Systeme, damit Kosten- und Ressourcendaten automatisch in den Angebotsprozess einfließen.",
+        "tag": "API First"
+      },
+      {
+        "icon": "BookOpen",
+        "title": "Wissensdatenbank des Unternehmens",
+        "desc": "Das System lernt aus Ihrer Angebotshistorie und verbessert schrittweise Empfehlungen sowie Risikoprognosen.",
+        "tag": "Selbstlernend"
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Compliance-Validierung",
+        "desc": "Prüft die Vollständigkeit der Unterlagen und die Konformität mit den Anforderungen des Auftraggebers automatisch.",
+        "tag": "Compliance"
+      }
+    ]
+  },
+  "benefits": {
+    "sectionLabel": "Warum BidSentra",
+    "title": "Messbare Vorteile für Ihr Team",
+    "items": [
+      {
+        "num": "01",
+        "title": "Operative Effizienz",
+        "desc": "Reduzieren Sie die Angebotsvorbereitung um 50 % und senken Sie die Bearbeitungskosten um 30 %. Ihr Team kann doppelt so viele Verfahren abwickeln."
+      },
+      {
+        "num": "02",
+        "title": "Sicherheit und Konformität",
+        "desc": "Die automatische formale Prüfung beseitigt Verfahrensfehler. Jedes Angebot verlässt das System vollständig und regelkonform."
+      },
+      {
+        "num": "03",
+        "title": "Bessere Entscheidungen",
+        "desc": "Datenbasierte Empfehlungen helfen, die profitabelsten Ausschreibungen zu priorisieren und Chancen mit geringer Erfolgswahrscheinlichkeit zu vermeiden."
+      },
+      {
+        "num": "04",
+        "title": "Wettbewerbsvorsprung",
+        "desc": "Seien Sie schneller als der Wettbewerb. BidSentra gehört zu den ersten Lösungen in Polen, die tiefe Automatisierung mit lokaler Rechtspraxis verbinden."
+      }
+    ],
+    "kpisLabel": "Ergebnisse von BidSentra-Kunden",
+    "kpis": [
+      { "label": "Weniger Zeit für Angebote", "value": "−50%", "pct": 50 },
+      { "label": "Weniger formale Fehler", "value": "−80%", "pct": 80 },
+      { "label": "Höhere Erfolgsquote", "value": "+30%", "pct": 30 },
+      { "label": "Weniger Bearbeitungskosten", "value": "−30%", "pct": 30 }
+    ],
+    "quote": "In zwei Jahren wird jedes starke Angebotsteam von KI unterstützt. Sie können diesen Vorsprung schon heute nutzen."
+  },
+  "industries": {
+    "sectionLabel": "Sektoren und Branchen",
+    "title": "Entwickelt für Branchen, die von Ausschreibungen leben",
+    "subtitle": "BidSentra ist auf die Besonderheiten öffentlicher und kommerzieller Ausschreibungen in den wichtigsten Branchen in Polen zugeschnitten.",
+    "items": [
+      {
+        "icon": "Building2",
+        "title": "Bau und Ingenieurwesen",
+        "desc": "Generalunternehmer und Planungsbüros, die jedes Jahr Dutzende hochwertiger Angebote vorbereiten."
+      },
+      {
+        "icon": "Monitor",
+        "title": "IT und Software",
+        "desc": "Softwarehäuser und Systemintegratoren, die an IT- und Digitalisierungsvergaben teilnehmen."
+      },
+      {
+        "icon": "Zap",
+        "title": "Energie und Erneuerbare",
+        "desc": "Unternehmen für Solar-, Wind- und Netzmodernisierungsprojekte, oft in Konsortialmodellen."
+      },
+      {
+        "icon": "Target",
+        "title": "Vergabeberatung",
+        "desc": "Beratungen, die Ausschreibungsprozesse für Kunden steuern und Qualität sowie Durchsatz skalieren wollen."
+      }
+    ],
+    "quoteText": "Dem Markt fehlt weiterhin eine Lösung, die automatisierte Dokumentenanalyse, regelkonforme Angebotserstellung und Integrationen mit lokalen Vergabeplattformen vereint. BidSentra schließt diese Lücke.",
+    "quoteAuthor": "BidSentra Team · Up To You Sp. z o.o."
+  },
+  "testimonials": {
+    "sectionLabel": "Referenzen",
+    "title": "Was Partner über uns sagen",
+    "disclaimer": "* Beispieldaten – echte Referenzen folgen in Kürze",
+    "items": [
+      {
+        "quote": "BidSentra hat unseren Angebotsprozess transformiert. Die Vorbereitung dauert jetzt nur noch halb so lange.",
+        "name": "Johann Schmidt",
+        "role": "Leiter Angebotsmanagement",
+        "company": "Baugruppe GmbH"
+      },
+      {
+        "quote": "Die Eliminierung formaler Fehler ist für uns entscheidend. Seit der Einführung wurde kein Angebot mehr abgelehnt.",
+        "name": "Anna Novak",
+        "role": "Leiterin Vergabeteam",
+        "company": "IT Solutions S.A."
+      },
+      {
+        "quote": "Bid Score™ hilft uns, uns auf Ausschreibungen mit realer Gewinnchance zu konzentrieren. Unsere Erfolgsquote stieg um 35 %.",
+        "name": "Peter Wiśniewski",
+        "role": "Geschäftsführer",
+        "company": "Tender Advisory Plus"
+      }
+    ]
+  },
+  "pricing": {
+    "sectionLabel": "Preise",
+    "title": "Auf Ihre Bedürfnisse zugeschnitten",
+    "subtitle": "Für die ersten 50 Unternehmen bleibt der Preis 24 Monate fix",
+    "plans": [
+      {
+        "name": "STARTER",
+        "target": "Für KMU",
+        "featured": false,
+        "features": [
+          "AI / NLP Dokumentenanalyse",
+          "AI Draft Generator (bis zu 10 Angebote / Monat)",
+          "Bid Score™ Chancenbewertung",
+          "BZP- und TED-Integration",
+          "E-Mail-Support"
+        ],
+        "cta": "Bald verfügbar"
+      },
+      {
+        "name": "PROFESSIONAL",
+        "target": "Für aktive Bieter",
+        "featured": true,
+        "badge": "Am beliebtesten",
+        "features": [
+          "Alles aus Starter",
+          "Unbegrenzte Anzahl von Angeboten",
+          "Wissensdatenbank des Unternehmens",
+          "ERP / CRM Integration",
+          "Schrittweise Compliance-Prüfung",
+          "Reporting und Analytik",
+          "Priorisierter Support"
+        ],
+        "cta": "Bald verfügbar"
+      },
+      {
+        "name": "ENTERPRISE",
+        "target": "Für größere Organisationen",
+        "featured": false,
+        "features": [
+          "Alles aus Professional",
+          "Dediziertes Hosting / On-Premise",
+          "BIM- und Spezialsystem-Integration",
+          "Eigenes KI-Modell auf Ihren Daten",
+          "Training für Ihr Angebotsteam",
+          "Dedizierter Ansprechpartner"
+        ],
+        "cta": "Bald verfügbar"
+      }
+    ]
+  },
+  "faq": {
+    "sectionLabel": "FAQ",
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über BidSentra wissen sollten.",
+    "items": [
+      {
+        "q": "Welche Dokumentformate unterstützt BidSentra?",
+        "a": "BidSentra unterstützt derzeit PDF, DOCX sowie gängige Tabellenformate wie XLSX und CSV. Wir erweitern die Formatunterstützung laufend anhand der Nutzerbedürfnisse. Alle Dokumente werden sicher verarbeitet und niemals an Dritte weitergegeben."
+      },
+      {
+        "q": "Was ist im Basispaket enthalten?",
+        "a": "Das Starter-Paket umfasst AI/NLP-Dokumentenanalyse, den AI Draft Generator für bis zu 10 Angebote pro Monat, Bid Score™ zur Chancenbewertung, BZP- und TED-Integration sowie E-Mail-Support."
+      },
+      {
+        "q": "Ersetzt BidSentra mein Angebotsteam?",
+        "a": "Nein. BidSentra unterstützt Ihr Team, indem es repetitive Aufgaben automatisiert. Dadurch können sich Fachleute stärker auf Strategie und Angebotsqualität konzentrieren. Entscheidungen treffen weiterhin Menschen."
+      },
+      {
+        "q": "Sind unsere Ausschreibungsdaten sicher?",
+        "a": "Ja. Daten werden bei der Übertragung und im Ruhezustand verschlüsselt. Wir arbeiten nach hohen Sicherheitsstandards im Einklang mit der DSGVO. Ihre Daten werden weder an Dritte weitergegeben noch zum Training öffentlicher KI-Modelle verwendet."
+      },
+      {
+        "q": "Was passiert nach dem Ende der Testphase?",
+        "a": "Nach der 14-tägigen kostenlosen Testphase können Sie einen unserer Tarife wählen oder die Nutzung beenden. Ihre Daten bleiben danach noch 30 Tage lang für den Export verfügbar."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, mehr",
+    "titleHighlight": "Ausschreibungen zu gewinnen?",
+    "description": "Buchen Sie eine 30-minütige Demo und sehen Sie, wie BidSentra die Angebotserstellung in Ihrem Unternehmen transformieren kann.",
+    "trustBadges": ["OHNE VERPFLICHTUNG", "14 TAGE GRATIS", "LOKALER SUPPORT"],
+    "emailButtonText": "Gespräch vereinbaren",
+    "emailAddress": "info@bidsentra.pl",
+    "formEndpoint": "https://bidsentra-contact-form.145884.workers.dev",
+    "formLabels": {
+      "name": "Name",
+      "namePlaceholder": "Max Mustermann",
+      "email": "E-Mail",
+      "emailPlaceholder": "max@firma.de",
+      "message": "Nachricht",
+      "messagePlaceholder": "Wobei können wir helfen?",
+      "submit": "Senden",
+      "sending": "Wird gesendet...",
+      "thankYouTitle": "Vielen Dank!",
+      "thankYouMessage": "Wir melden uns in Kürze bei Ihnen.",
+      "errorTitle": "Ihre Nachricht konnte nicht gesendet werden",
+      "errorMessageBeforeEmail": "Bitte versuchen Sie es in einem Moment erneut oder schreiben Sie direkt an ",
+      "errorMessageAfterEmail": ".",
+      "backToForm": "Zurück zum Formular"
+    },
+    "bottomNote": "Ohne Verpflichtung · 14 Tage gratis · Lokaler Support"
+  },
+  "privacy": {
+    "badge": "Datenschutz",
+    "title": "Datenschutzerklärung von BidSentra",
+    "intro": "Nachfolgend finden Sie Informationen dazu, wie wir personenbezogene Daten im Zusammenhang mit der Nutzung der BidSentra-Website und des Kontaktformulars verarbeiten.",
+    "updatedLabel": "Aktualisiert",
+    "updatedDate": "27. März 2026",
+    "sourceNote": "Die Angaben zum Verantwortlichen wurden auf Grundlage des beigefügten aktuellen Auszugs aus dem polnischen Landesgerichtsregister (KRS Nr. 0001221405) und der aktuellen Konfiguration der Website erstellt.",
+    "adminCardTitle": "Verantwortlicher",
+    "adminContactLabel": "Kontakt zum Datenschutz:",
+    "sections": [
+      {
+        "title": "1. Verantwortlicher",
+        "paragraphs": [
+          "Verantwortlicher für Ihre personenbezogenen Daten ist UP TO YOU spółka z ograniczoną odpowiedzialnością mit Sitz in Lublin, ul. Gospodarcza 26, 20-213 Lublin, eingetragen im polnischen Landesgerichtsregister unter KRS Nr. 0001221405, NIP 9462763547, REGON 543872521.",
+          "In allen Fragen zum Schutz personenbezogener Daten erreichen Sie uns unter: info@bidsentra.pl."
+        ]
+      },
+      {
+        "title": "2. Umfang und Herkunft der Daten",
+        "paragraphs": [
+          "Wir verarbeiten Daten, die Sie uns freiwillig bei der Nutzung des Kontaktformulars oder im E-Mail-Kontakt mitteilen, insbesondere Ihren Namen, Ihre E-Mail-Adresse und den Inhalt Ihrer Nachricht.",
+          "Bei der Nutzung der Website können außerdem grundlegende technische Daten verarbeitet werden, etwa IP-Adresse, Datum und Uhrzeit der Anfrage, Browser- und Gerätedaten sowie Logs, die für Sicherheit und den ordnungsgemäßen Betrieb der Website erforderlich sind."
+        ]
+      },
+      {
+        "title": "3. Zwecke und Rechtsgrundlagen",
+        "paragraphs": [
+          "Wir verarbeiten Ihre Daten, um auf Ihre Nachricht zu antworten, Anfragen zu Angebot, Demo oder Zusammenarbeit zu bearbeiten und die dazugehörige Korrespondenz fortzuführen.",
+          "Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit der Kontakt auf den Abschluss eines Vertrags oder vorvertragliche Maßnahmen gerichtet ist, sowie Art. 6 Abs. 1 lit. f DSGVO, also unser berechtigtes Interesse an der Bearbeitung von Korrespondenz, der Sicherstellung der Website-Sicherheit und der Abwehr möglicher Ansprüche.",
+          "Wenn Sie in Ihrer Nachricht zusätzliche Daten angeben, erfolgt dies aus eigener Initiative. Bitte senden Sie uns keine Daten, die wir für die Bearbeitung Ihrer Anfrage nicht benötigen."
+        ]
+      },
+      {
+        "title": "4. Ist die Bereitstellung der Daten verpflichtend?",
+        "paragraphs": [
+          "Die Angabe von Daten im Kontaktformular ist freiwillig, aber erforderlich, damit wir antworten können. Ohne diese Daten können wir Ihre Anfrage möglicherweise nicht bearbeiten."
+        ]
+      },
+      {
+        "title": "5. Empfänger der Daten",
+        "paragraphs": [
+          "Ihre Daten können an Dienstleister weitergegeben werden, die wir für den Betrieb der Website und die Bearbeitung von Kontaktanfragen einsetzen, insbesondere Anbieter von statischem Hosting, Netzwerkinfrastruktur und E-Mail-Zustellung.",
+          "Zum Zeitpunkt der Veröffentlichung dieser Erklärung nutzen wir dafür insbesondere GitHub Pages, Cloudflare und Brevo. Diese Anbieter verarbeiten Daten in unserem Auftrag oder als eigenständige Verantwortliche, soweit dies für ihre Dienste erforderlich ist."
+        ]
+      },
+      {
+        "title": "6. Übermittlungen außerhalb des EWR",
+        "paragraphs": [
+          "Aufgrund des Einsatzes bestimmter Technologieanbieter können Daten außerhalb des Europäischen Wirtschaftsraums übermittelt werden. In solchen Fällen stellen wir sicher, dass die Übermittlung rechtmäßig erfolgt, insbesondere auf Grundlage von Standardvertragsklauseln, Angemessenheitsbeschlüssen oder anderen zulässigen Mechanismen."
+        ]
+      },
+      {
+        "title": "7. Speicherdauer",
+        "paragraphs": [
+          "Korrespondenzdaten speichern wir für die Dauer, die zur Bearbeitung der Angelegenheit erforderlich ist, und anschließend so lange, wie wir sie benötigen, um die ordnungsgemäße Bearbeitung nachzuweisen oder uns gegen Ansprüche zu verteidigen, jedoch nicht länger als bis zum Ablauf der einschlägigen Verjährungsfristen, sofern nicht gesetzlich längere Aufbewahrungsfristen vorgeschrieben sind.",
+          "Technische Daten und Servicelogs werden so lange gespeichert, wie es zur Gewährleistung von Sicherheit, Missbrauchserkennung und Aufrechterhaltung der Dienste erforderlich ist, entsprechend unserer Konfiguration und den Richtlinien unserer Anbieter."
+        ]
+      },
+      {
+        "title": "8. Ihre Rechte",
+        "paragraphs": [
+          "Sie haben das Recht auf Auskunft über Ihre Daten, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Widerspruch gegen Verarbeitungen, die auf unserem berechtigten Interesse beruhen.",
+          "Soweit die Verarbeitung auf Art. 6 Abs. 1 lit. b DSGVO beruht, können Sie außerdem Datenübertragbarkeit verlangen.",
+          "Zudem haben Sie das Recht, Beschwerde bei der Präsidentin bzw. dem Präsidenten der polnischen Datenschutzaufsichtsbehörde einzulegen, wenn Sie der Ansicht sind, dass Ihre Daten rechtswidrig verarbeitet werden."
+        ]
+      },
+      {
+        "title": "9. Automatisierte Entscheidungen",
+        "paragraphs": [
+          "Daten aus dem Kontaktformular werden nicht verwendet, um Ihnen gegenüber automatisierte Entscheidungen einschließlich Profiling im Sinne der DSGVO zu treffen."
+        ]
+      },
+      {
+        "title": "10. Cookies und ähnliche Technologien",
+        "paragraphs": [
+          "Zum Zeitpunkt der Veröffentlichung dieser Erklärung verwendet die Website keine eigenen Cookies oder ähnlichen Technologien zu Analyse- oder Marketingzwecken, die Ihre Einwilligung erfordern würden.",
+          "Bei der Nutzung der Website können Ihr Browser und die technische Infrastruktur dennoch Daten verarbeiten, die für die Darstellung der Website, die Sicherheit der Übertragung und die Bearbeitung von HTTP-Anfragen erforderlich sind. Wenn wir künftig Analyse-, Werbe- oder andere nicht notwendige Cookie-basierte Tools einsetzen, werden wir vor deren Aktivierung einen geeigneten Einwilligungsmechanismus einführen und diese Erklärung aktualisieren."
+        ]
+      },
+      {
+        "title": "11. Änderungen dieser Datenschutzerklärung",
+        "paragraphs": [
+          "Diese Datenschutzerklärung kann aktualisiert werden, wenn sich der Betrieb der Website, der Umfang der verarbeiteten Daten oder die geltenden Rechtsvorschriften ändern. Die aktuelle Fassung wird stets auf dieser Seite veröffentlicht."
+        ]
+      }
+    ]
+  }
+}

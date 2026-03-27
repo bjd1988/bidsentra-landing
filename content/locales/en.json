@@ -1,0 +1,489 @@
+{
+  "locale": "en",
+  "metadata": {
+    "homeTitle": "BidSentra – Win More Tenders with AI",
+    "homeDescription": "BidSentra is an AI platform that automates tender-document analysis, generates compliant bids and helps assess your chances of winning.",
+    "privacyTitle": "Privacy Policy | BidSentra",
+    "privacyDescription": "Information on how personal data is processed when using the BidSentra website and contact form."
+  },
+  "site": {
+    "siteName": "BidSentra",
+    "logo": "/images/logo-inverse.png",
+    "logoWhite": "/images/logo-inverse.png",
+    "navLinks": [
+      { "href": "#jak-dziala", "label": "How it works" },
+      { "href": "#korzysci", "label": "Benefits" },
+      { "href": "#cennik", "label": "Pricing" },
+      { "href": "#faq", "label": "FAQ" }
+    ],
+    "ctaButtonText": "Book a demo",
+    "footerDescription": "Your central hub for smarter bidding. AI-powered B2B procurement automation built for the Polish market.",
+    "footerCopyright": "© 2026 BidSentra · Up To You Sp. z o.o.",
+    "footerUrl": "bidsentra.pl",
+    "footerColumns": [
+      {
+        "title": "PRODUCT",
+        "links": [
+          { "href": "#jak-dziala", "label": "How it works" },
+          { "href": "#korzysci", "label": "Benefits" },
+          { "href": "#cennik", "label": "Pricing" },
+          { "href": "#faq", "label": "FAQ" }
+        ]
+      },
+      {
+        "title": "INDUSTRIES",
+        "links": [
+          { "href": "#sektory", "label": "Construction and engineering" },
+          { "href": "#sektory", "label": "IT and software" },
+          { "href": "#sektory", "label": "Energy and renewables" },
+          { "href": "#sektory", "label": "Tender advisory" }
+        ]
+      },
+      {
+        "title": "COMPANY",
+        "links": [
+          { "href": "#kontakt", "label": "Contact" },
+          { "href": "/en/privacy-policy", "label": "Privacy Policy" },
+          { "href": "#", "label": "Terms" },
+          { "href": "#", "label": "Publications" }
+        ]
+      }
+    ]
+  },
+  "hero": {
+    "badge": "100% aligned with Polish PPL",
+    "titleWhite": "Win more tenders",
+    "titleHighlight": "in half the time.",
+    "description": "BidSentra is an AI platform that automates tender-document analysis, generates bids aligned with Polish public procurement requirements and evaluates your win probability before competitors finish reading the specification.",
+    "ctaPrimary": "Book a demo",
+    "ctaSecondary": "How it works",
+    "card": {
+      "title": "BidSentra · Tender analysis",
+      "rows": [
+        { "label": "Tender:", "value": "IT network modernization" },
+        { "label": "Value:", "value": "PLN 2,400,000" }
+      ],
+      "bidScore": "82 / 100",
+      "pzpCompliance": "High",
+      "docCompleteness": 87,
+      "winChance": 73,
+      "bidScoreLabel": "Bid Score™",
+      "complianceLabel": "PPL compliance",
+      "docCompletenessLabel": "Document completeness",
+      "winChanceLabel": "Win probability (ML)"
+    }
+  },
+  "stats": {
+    "items": [
+      { "value": "50%", "label": "Less time spent on bids" },
+      { "value": "80%", "label": "Fewer formal errors" },
+      { "value": "+30%", "label": "Higher bid success rate" }
+    ]
+  },
+  "costCalculator": {
+    "title": "How much does one lost tender cost you?",
+    "fields": [
+      { "label": "Team time", "key": "teamTime", "defaultValue": 19900 },
+      { "label": "Labor costs", "key": "laborCost", "defaultValue": 3100 },
+      { "label": "Lost margin", "key": "lostMargin", "defaultValue": 8500 }
+    ],
+    "totalLabel": "Total cost",
+    "resetLabel": "Reset values",
+    "localeTag": "en-GB",
+    "currencyCode": "PLN",
+    "currencySuffix": "PLN"
+  },
+  "problem": {
+    "sectionLabel": "The problem we solve",
+    "title": "Tendering consumes time and resources",
+    "subtitle": "Companies using BidSentra submit bids an average of 4 days faster than their competitors.",
+    "traditionalLabel": "Traditional process",
+    "bidsentraLabel": "BidSentra",
+    "painPoints": [
+      {
+        "icon": "FileText",
+        "title": "Hundreds of pages to review",
+        "desc": "Tender specifications, statements of work, technical programs and declarations all have to be reviewed manually for each opportunity."
+      },
+      {
+        "icon": "Clock",
+        "title": "Weeks for a single bid",
+        "desc": "Preparing one bid can take from several days to several weeks and usually involves the whole bid team."
+      },
+      {
+        "icon": "AlertTriangle",
+        "title": "Formal mistakes mean rejection",
+        "desc": "One missing document or one unmet compliance requirement can waste the entire effort and cost you the contract."
+      },
+      {
+        "icon": "RefreshCw",
+        "title": "Starting from scratch every time",
+        "desc": "Knowledge from previous bids is rarely reused, so every new tender begins almost from zero."
+      }
+    ],
+    "solutions": [
+      "Key requirements extracted in minutes",
+      "Automatic checks of required qualifications, references and supporting documents",
+      "Immediate identification of gaps and inconsistencies in the specification",
+      "Zero formal mistakes. Full compliance with procurement requirements"
+    ],
+    "marketStats": [
+      { "val": "200k+", "lbl": "tenders published annually in Poland" },
+      { "val": "~60%", "lbl": "bids contain formal errors" },
+      { "val": "3–6 wks", "lbl": "average bid-preparation time" },
+      { "val": "PPL", "lbl": "full legal alignment" }
+    ]
+  },
+  "howItWorks": {
+    "sectionLabel": "How it works",
+    "title": "From documentation to a ready bid in 4 steps",
+    "subtitle": "BidSentra guides your team through the full process, from tender analysis to a final bid ready for submission.",
+    "steps": [
+      {
+        "num": "01",
+        "icon": "Upload",
+        "title": "Upload the documentation",
+        "desc": "Paste the tender link or upload the specification. BidSentra can also pull documents from BZP, TED and e-Zamówienia."
+      },
+      {
+        "num": "02",
+        "icon": "Brain",
+        "title": "AI analyses the requirements",
+        "desc": "The NLP/LLM engine extracts key legal, technical and financial requirements, then highlights risks and hidden traps."
+      },
+      {
+        "num": "03",
+        "icon": "BarChart3",
+        "title": "Review the Bid Score™",
+        "desc": "The ML module assesses attractiveness and win probability using your own data and market parameters."
+      },
+      {
+        "num": "04",
+        "icon": "FileOutput",
+        "title": "Generate the bid",
+        "desc": "The AI Draft Generator creates a complete, compliant bid drawing from your knowledge base of references, certificates and templates."
+      }
+    ]
+  },
+  "features": {
+    "sectionLabel": "Core capabilities",
+    "title": "Technology that changes the rules of the game",
+    "subtitle": "BidSentra combines advanced AI with practical knowledge of the Polish procurement market.",
+    "items": [
+      {
+        "icon": "Search",
+        "title": "Semantic document analysis (NLP)",
+        "desc": "The system understands the context of legal clauses, classifies requirements and automatically identifies risks in tender documentation.",
+        "tag": "AI / NLP"
+      },
+      {
+        "icon": "FileEdit",
+        "title": "AI Draft Generator",
+        "desc": "Automatically creates bid structure and compliant content by combining tender data with your references and certificates.",
+        "tag": "RAG Architecture"
+      },
+      {
+        "icon": "BarChart3",
+        "title": "Bid Score™ scoring",
+        "desc": "A machine-learning model recommends smarter bidding decisions based on historical and contextual data.",
+        "tag": "Machine Learning"
+      },
+      {
+        "icon": "Link2",
+        "title": "ERP / CRM / BIM integrations",
+        "desc": "An open API integrates with existing systems so cost and resource data can feed the bid process automatically.",
+        "tag": "API First"
+      },
+      {
+        "icon": "BookOpen",
+        "title": "Organizational knowledge repository",
+        "desc": "The system learns from your bidding history and gradually improves recommendation quality and project-risk predictions.",
+        "tag": "Self-learning"
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Compliance validation",
+        "desc": "Automatically verifies document completeness and compliance with buyer requirements, eliminating mistakes that lead to rejection.",
+        "tag": "Compliance"
+      }
+    ]
+  },
+  "benefits": {
+    "sectionLabel": "Why BidSentra",
+    "title": "Measurable benefits for your team",
+    "items": [
+      {
+        "num": "01",
+        "title": "Operational efficiency",
+        "desc": "Cut bid-preparation time by 50% and lower tender-handling costs by 30%. Your team can handle twice as many procedures."
+      },
+      {
+        "num": "02",
+        "title": "Security and compliance",
+        "desc": "Automatic formal verification removes procedural mistakes. Every bid leaves the system complete and compliant."
+      },
+      {
+        "num": "03",
+        "title": "Decision intelligence",
+        "desc": "Data-driven recommendations help you focus on the most profitable tenders and avoid low-probability opportunities."
+      },
+      {
+        "num": "04",
+        "title": "Competitive advantage",
+        "desc": "Move faster than the competition. BidSentra is one of the first tools in Poland combining deep automation with local legal reality."
+      }
+    ],
+    "kpisLabel": "Results achieved by BidSentra clients",
+    "kpis": [
+      { "label": "Bid-preparation time reduced", "value": "−50%", "pct": 50 },
+      { "label": "Formal errors reduced", "value": "−80%", "pct": 80 },
+      { "label": "Tender success rate improved", "value": "+30%", "pct": 30 },
+      { "label": "Tender-handling costs reduced", "value": "−30%", "pct": 30 }
+    ],
+    "quote": "Within two years, every serious bid team will be supported by AI. You can gain that advantage today."
+  },
+  "industries": {
+    "sectionLabel": "Sectors and industries",
+    "title": "Built for industries that live on tenders",
+    "subtitle": "BidSentra is tailored to the specifics of public and commercial tendering in key sectors operating in Poland.",
+    "items": [
+      {
+        "icon": "Building2",
+        "title": "Construction and engineering",
+        "desc": "General contractors and design firms preparing dozens of high-value bids every year."
+      },
+      {
+        "icon": "Monitor",
+        "title": "IT and software",
+        "desc": "Software houses and system integrators competing for digital-transformation and public-sector IT projects."
+      },
+      {
+        "icon": "Zap",
+        "title": "Energy and renewables",
+        "desc": "Companies delivering solar, wind and grid-modernization projects, often in consortium models."
+      },
+      {
+        "icon": "Target",
+        "title": "Tender advisory",
+        "desc": "Advisory firms running bid processes for clients and looking to scale quality and throughput."
+      }
+    ],
+    "quoteText": "The market still lacks a solution that combines automated document analysis, compliant bid generation and integration with local tender platforms. BidSentra fills that gap.",
+    "quoteAuthor": "BidSentra Team · Up To You Sp. z o.o."
+  },
+  "testimonials": {
+    "sectionLabel": "Testimonials",
+    "title": "What partners say about us",
+    "disclaimer": "* Sample data — real testimonials coming soon",
+    "items": [
+      {
+        "quote": "BidSentra transformed our bidding process. Preparing offers now takes half the time.",
+        "name": "John Smith",
+        "role": "Head of Bidding",
+        "company": "Construction Group Ltd."
+      },
+      {
+        "quote": "Eliminating formal errors is the key value for us. No bid has been rejected since implementation.",
+        "name": "Anna Novak",
+        "role": "Tender Team Manager",
+        "company": "IT Solutions S.A."
+      },
+      {
+        "quote": "Bid Score™ helps us focus on tenders where we truly have a chance to win. Our hit rate increased by 35%.",
+        "name": "Peter Wisniewski",
+        "role": "CEO",
+        "company": "Tender Advisory Plus"
+      }
+    ]
+  },
+  "pricing": {
+    "sectionLabel": "Pricing",
+    "title": "Aligned with your needs",
+    "subtitle": "First 50 companies get pricing frozen for 24 months",
+    "plans": [
+      {
+        "name": "STARTER",
+        "target": "For SMEs",
+        "featured": false,
+        "features": [
+          "AI / NLP document analysis",
+          "AI Draft Generator (up to 10 bids / month)",
+          "Bid Score™ opportunity assessment",
+          "BZP and TED integration",
+          "Email support"
+        ],
+        "cta": "Available soon"
+      },
+      {
+        "name": "PROFESSIONAL",
+        "target": "For active bidders",
+        "featured": true,
+        "badge": "Most popular",
+        "features": [
+          "Everything in Starter",
+          "Unlimited number of bids",
+          "Organizational knowledge repository",
+          "ERP / CRM integration",
+          "Step-by-step compliance validation",
+          "Reporting and analytics",
+          "Priority support"
+        ],
+        "cta": "Available soon"
+      },
+      {
+        "name": "ENTERPRISE",
+        "target": "For larger organizations",
+        "featured": false,
+        "features": [
+          "Everything in Professional",
+          "Dedicated hosting / on-premise",
+          "BIM and specialist system integration",
+          "Custom AI model on your data",
+          "Bid team training",
+          "Dedicated account lead"
+        ],
+        "cta": "Available soon"
+      }
+    ]
+  },
+  "faq": {
+    "sectionLabel": "FAQ",
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know about BidSentra.",
+    "items": [
+      {
+        "q": "Which document formats does BidSentra support?",
+        "a": "BidSentra currently supports PDF, DOCX and common spreadsheet formats such as XLSX and CSV. We continuously expand format support based on user needs. All documents are processed securely and are never shared with third parties."
+      },
+      {
+        "q": "What is included in the basic package?",
+        "a": "The Starter package includes AI/NLP document analysis, AI Draft Generator for up to 10 bids per month, Bid Score™ for opportunity assessment, BZP and TED integration and email support."
+      },
+      {
+        "q": "Does BidSentra replace my bid team?",
+        "a": "No. BidSentra is a tool that supports your team. It automates repetitive work so specialists can focus on strategy and bid quality. The system accelerates the process, but decisions remain with people."
+      },
+      {
+        "q": "Is our tender data secure?",
+        "a": "Yes. Data is encrypted both in transit and at rest. We follow high security standards aligned with GDPR. Your data is never shared with third parties and is not used to train public AI models."
+      },
+      {
+        "q": "What happens after the trial period ends?",
+        "a": "After the 14-day free trial you can choose one of our subscription plans or stop using the platform. Your data remains available for export for 30 days after the trial ends."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to win more",
+    "titleHighlight": "tenders?",
+    "description": "Book a 30-minute demo and see how BidSentra can transform bid preparation in your company.",
+    "trustBadges": ["NO COMMITMENT", "14-DAY FREE TRIAL", "LOCAL SUPPORT"],
+    "emailButtonText": "Book a call",
+    "emailAddress": "info@bidsentra.pl",
+    "formEndpoint": "https://bidsentra-contact-form.145884.workers.dev",
+    "formLabels": {
+      "name": "Full name",
+      "namePlaceholder": "John Smith",
+      "email": "Email",
+      "emailPlaceholder": "john@company.com",
+      "message": "Message",
+      "messagePlaceholder": "How can we help?",
+      "submit": "Send",
+      "sending": "Sending...",
+      "thankYouTitle": "Thank you!",
+      "thankYouMessage": "We will get back to you shortly.",
+      "errorTitle": "We could not send your message",
+      "errorMessageBeforeEmail": "Please try again in a moment or write directly to ",
+      "errorMessageAfterEmail": ".",
+      "backToForm": "Back to the form"
+    },
+    "bottomNote": "No commitment · 14-day free trial · Local support"
+  },
+  "privacy": {
+    "badge": "Data protection",
+    "title": "BidSentra Privacy Policy",
+    "intro": "Below you will find information on how we process personal data in connection with the BidSentra website and contact form.",
+    "updatedLabel": "Updated",
+    "updatedDate": "27 March 2026",
+    "sourceNote": "Controller details were prepared on the basis of the attached current extract from the National Court Register (KRS no. 0001221405) and the current website configuration.",
+    "adminCardTitle": "Data controller",
+    "adminContactLabel": "Data-protection contact:",
+    "sections": [
+      {
+        "title": "1. Data controller",
+        "paragraphs": [
+          "Your personal data is controlled by UP TO YOU spółka z ograniczoną odpowiedzialnością with its registered office in Lublin, ul. Gospodarcza 26, 20-213 Lublin, entered in the Polish National Court Register under KRS no. 0001221405, NIP 9462763547, REGON 543872521.",
+          "For all matters relating to personal-data protection, you can contact us at: info@bidsentra.pl."
+        ]
+      },
+      {
+        "title": "2. Scope and sources of data",
+        "paragraphs": [
+          "We process data you provide voluntarily when using the contact form or contacting us by email, in particular your name, email address and the content of your message.",
+          "When you use the website, basic technical data may also be processed, such as IP address, date and time of the request, browser and device data, and logs necessary to ensure security and proper operation of the website."
+        ]
+      },
+      {
+        "title": "3. Purposes and legal bases",
+        "paragraphs": [
+          "We process your data to respond to your message, handle requests for an offer, demo or cooperation, and continue correspondence related to that contact.",
+          "The legal basis is Article 6(1)(b) GDPR where the contact is aimed at concluding a contract or taking steps prior to entering into a contract, and Article 6(1)(f) GDPR, namely our legitimate interest in handling correspondence, ensuring website security and defending against potential claims.",
+          "If you provide additional data in your message, you do so on your own initiative. Please do not send data we do not need to handle your request."
+        ]
+      },
+      {
+        "title": "4. Whether providing data is mandatory",
+        "paragraphs": [
+          "Providing data in the contact form is voluntary, but necessary for us to answer. If you do not provide the data, we may be unable to handle your request."
+        ]
+      },
+      {
+        "title": "5. Recipients of data",
+        "paragraphs": [
+          "Your data may be disclosed to entities we use to operate the website and handle contact, in particular providers of static hosting, network infrastructure and email-delivery services.",
+          "At the time of publication of this policy, we use in this respect GitHub Pages, Cloudflare and Brevo. These providers process data on our behalf or as separate controllers to the extent necessary for their services."
+        ]
+      },
+      {
+        "title": "6. Transfers outside the EEA",
+        "paragraphs": [
+          "Because we use certain technology providers, data may be transferred outside the European Economic Area. In such cases, we ensure that transfers take place lawfully, in particular on the basis of standard contractual clauses, adequacy decisions or other permitted transfer mechanisms."
+        ]
+      },
+      {
+        "title": "7. Retention period",
+        "paragraphs": [
+          "We store correspondence data for the period necessary to handle the matter and then for the time needed to demonstrate proper handling or defend against claims, no longer than the applicable limitation periods unless a longer retention period is required by law.",
+          "Technical data and service logs are retained for the period necessary to ensure security, detect abuse and maintain continuity of services, in line with our configuration and the policies of our providers."
+        ]
+      },
+      {
+        "title": "8. Your rights",
+        "paragraphs": [
+          "You have the right to request access to your data, rectification, erasure, restriction of processing and to object to processing based on our legitimate interest.",
+          "Where processing is based on Article 6(1)(b) GDPR, you may also request data portability.",
+          "You also have the right to lodge a complaint with the President of the Polish Personal Data Protection Office if you believe your data is processed unlawfully."
+        ]
+      },
+      {
+        "title": "9. Automated decision-making",
+        "paragraphs": [
+          "Data submitted through the contact form is not used to make decisions about you by automated means, including profiling within the meaning of GDPR."
+        ]
+      },
+      {
+        "title": "10. Cookies and similar technologies",
+        "paragraphs": [
+          "As of the publication date of this policy, the website does not use its own cookies or similar technologies for analytics or marketing purposes that would require your consent.",
+          "When using the website, your browser and the technical infrastructure may still process data necessary to display the site, ensure transmission security and serve HTTP requests. If we add analytics, advertising or other non-essential cookie-based tools in the future, we will implement an appropriate consent mechanism before activating them and update this policy."
+        ]
+      },
+      {
+        "title": "11. Changes to this privacy policy",
+        "paragraphs": [
+          "This privacy policy may be updated if the operation of the website, the scope of processed data or applicable law changes. The current version is always published on this page."
+        ]
+      }
+    ]
+  }
+}

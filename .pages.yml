@@ -122,6 +122,494 @@ components:
       - name: thankYouMessage
         label: Treść podziękowania
         type: string
+  metric_item:
+    label: Statystyka
+    type: object
+    fields:
+      - name: value
+        label: Wartość
+        type: string
+      - name: label
+        label: Opis
+        type: string
+  market_stat:
+    label: Statystyka rynku
+    type: object
+    fields:
+      - name: val
+        label: Wartość
+        type: string
+      - name: lbl
+        label: Opis
+        type: string
+  kpi_item:
+    label: KPI
+    type: object
+    fields:
+      - name: label
+        label: Etykieta
+        type: string
+      - name: value
+        label: Wartość
+        type: string
+      - name: pct
+        label: Procent
+        type: number
+  hero_card_full:
+    label: Karta hero
+    type: object
+    fields:
+      - name: title
+        label: Tytuł karty
+        type: string
+      - name: rows
+        label: Wiersze
+        component: label_value
+        list: true
+      - name: bidScore
+        label: Bid Score
+        type: string
+      - name: pzpCompliance
+        label: Status zgodności
+        type: string
+      - name: docCompleteness
+        label: Kompletność dokumentów
+        type: number
+      - name: winChance
+        label: Szansa wygranej
+        type: number
+      - name: bidScoreLabel
+        label: Etykieta Bid Score
+        type: string
+      - name: complianceLabel
+        label: Etykieta zgodności
+        type: string
+      - name: docCompletenessLabel
+        label: Etykieta kompletności
+        type: string
+      - name: winChanceLabel
+        label: Etykieta szans wygranej
+        type: string
+  metadata_copy:
+    label: Meta dane
+    type: object
+    fields:
+      - name: homeTitle
+        label: Tytuł strony głównej
+        type: string
+      - name: homeDescription
+        label: Opis strony głównej
+        type: text
+      - name: privacyTitle
+        label: Tytuł polityki prywatności
+        type: string
+      - name: privacyDescription
+        label: Opis polityki prywatności
+        type: text
+  calculator_field:
+    label: Pole kalkulatora
+    type: object
+    fields:
+      - name: label
+        label: Etykieta
+        type: string
+      - name: key
+        label: Klucz
+        type: string
+      - name: defaultValue
+        label: Wartość domyślna
+        type: number
+  pricing_plan:
+    label: Plan
+    type: object
+    fields:
+      - name: name
+        label: Nazwa
+        type: string
+      - name: target
+        label: Dla kogo
+        type: string
+      - name: featured
+        label: Wyróżniony
+        type: boolean
+      - name: badge
+        label: Badge
+        type: string
+        required: false
+      - name: features
+        label: Cechy
+        type: string
+        list: true
+      - name: cta
+        label: CTA
+        type: string
+  form_labels_full:
+    label: Etykiety formularza rozszerzone
+    type: object
+    fields:
+      - name: name
+        label: Etykieta imię
+        type: string
+      - name: namePlaceholder
+        label: Placeholder imię
+        type: string
+      - name: email
+        label: Etykieta email
+        type: string
+      - name: emailPlaceholder
+        label: Placeholder email
+        type: string
+      - name: message
+        label: Etykieta wiadomość
+        type: string
+      - name: messagePlaceholder
+        label: Placeholder wiadomość
+        type: string
+      - name: submit
+        label: Przycisk wyślij
+        type: string
+      - name: sending
+        label: Tekst wysyłanie
+        type: string
+      - name: thankYouTitle
+        label: Tytuł podziękowania
+        type: string
+      - name: thankYouMessage
+        label: Treść podziękowania
+        type: string
+      - name: errorTitle
+        label: Tytuł błędu
+        type: string
+      - name: errorMessageBeforeEmail
+        label: Tekst błędu przed emailem
+        type: string
+      - name: errorMessageAfterEmail
+        label: Tekst błędu po emailu
+        type: string
+      - name: backToForm
+        label: Tekst powrotu do formularza
+        type: string
+  privacy_section:
+    label: Sekcja polityki prywatności
+    type: object
+    fields:
+      - name: title
+        label: Tytuł
+        type: string
+      - name: paragraphs
+        label: Akapity
+        type: text
+        list: true
+  privacy_content:
+    label: Polityka prywatności
+    type: object
+    fields:
+      - name: badge
+        label: Badge
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: intro
+        label: Wstęp
+        type: text
+      - name: updatedLabel
+        label: Etykieta aktualizacji
+        type: string
+      - name: updatedDate
+        label: Data aktualizacji
+        type: string
+      - name: sourceNote
+        label: Nota źródłowa
+        type: text
+      - name: adminCardTitle
+        label: Tytuł karty administratora
+        type: string
+      - name: adminContactLabel
+        label: Etykieta kontaktu
+        type: string
+      - name: sections
+        label: Sekcje
+        component: privacy_section
+        list: true
+  localized_site:
+    label: Header i footer
+    type: object
+    fields:
+      - name: siteName
+        label: Nazwa strony
+        type: string
+      - name: logo
+        label: Logo w nagłówku
+        type: image
+      - name: logoWhite
+        label: Logo w stopce
+        type: image
+      - name: navLinks
+        label: Linki nawigacji
+        component: nav_link
+        list: true
+      - name: ctaButtonText
+        label: Tekst przycisku w headerze
+        type: string
+      - name: footerDescription
+        label: Opis stopki
+        type: text
+      - name: footerCopyright
+        label: Copyright
+        type: string
+      - name: footerUrl
+        label: URL w stopce
+        type: string
+      - name: footerColumns
+        label: Kolumny stopki
+        component: footer_column
+        list: true
+  localized_hero:
+    label: Hero
+    type: object
+    fields:
+      - name: badge
+        label: Badge
+        type: string
+      - name: titleWhite
+        label: Tytuł biały
+        type: string
+      - name: titleHighlight
+        label: Tytuł wyróżniony
+        type: string
+      - name: description
+        label: Opis
+        type: text
+      - name: ctaPrimary
+        label: Główny CTA
+        type: string
+      - name: ctaSecondary
+        label: Drugi CTA
+        type: string
+      - name: card
+        component: hero_card_full
+  localized_problem:
+    label: Problem
+    type: object
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: subtitle
+        label: Podtytuł
+        type: text
+      - name: traditionalLabel
+        label: Etykieta tradycyjnego procesu
+        type: string
+      - name: bidsentraLabel
+        label: Etykieta BidSentra
+        type: string
+      - name: painPoints
+        label: Problemy
+        component: icon_title_desc
+        list: true
+      - name: solutions
+        label: Rozwiązania
+        type: string
+        list: true
+      - name: marketStats
+        label: Statystyki rynkowe
+        component: market_stat
+        list: true
+  localized_how_it_works:
+    label: Jak to działa
+    type: object
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: subtitle
+        label: Podtytuł
+        type: text
+      - name: steps
+        label: Kroki
+        type: object
+        list: true
+        fields:
+          - name: num
+            label: Numer
+            type: string
+          - name: icon
+            label: Ikona
+            type: string
+          - name: title
+            label: Tytuł
+            type: string
+          - name: desc
+            label: Opis
+            type: text
+  localized_features:
+    label: Funkcjonalności
+    type: object
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: subtitle
+        label: Podtytuł
+        type: text
+      - name: items
+        label: Elementy
+        type: object
+        list: true
+        fields:
+          - name: icon
+            label: Ikona
+            type: string
+          - name: title
+            label: Tytuł
+            type: string
+          - name: desc
+            label: Opis
+            type: text
+          - name: tag
+            label: Tag
+            type: string
+  localized_benefits:
+    label: Korzyści
+    type: object
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: items
+        label: Elementy
+        component: title_desc_num
+        list: true
+      - name: kpisLabel
+        label: Etykieta KPI
+        type: string
+      - name: kpis
+        label: KPI
+        component: kpi_item
+        list: true
+      - name: quote
+        label: Cytat
+        type: text
+  localized_industries:
+    label: Sektory
+    type: object
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: subtitle
+        label: Podtytuł
+        type: text
+      - name: items
+        label: Branże
+        component: icon_title_desc
+        list: true
+      - name: quoteText
+        label: Cytat
+        type: text
+      - name: quoteAuthor
+        label: Autor cytatu
+        type: string
+  localized_testimonials:
+    label: Referencje
+    type: object
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: disclaimer
+        label: Disclaimer
+        type: string
+      - name: items
+        label: Referencje
+        component: testimonial
+        list: true
+  localized_pricing:
+    label: Cennik
+    type: object
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: subtitle
+        label: Podtytuł
+        type: string
+      - name: plans
+        label: Plany
+        component: pricing_plan
+        list: true
+  localized_faq:
+    label: FAQ
+    type: object
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: subtitle
+        label: Podtytuł
+        type: string
+      - name: items
+        label: Pytania
+        component: faq_item
+        list: true
+  localized_cta:
+    label: Kontakt / CTA
+    type: object
+    fields:
+      - name: title
+        label: Tytuł
+        type: string
+      - name: titleHighlight
+        label: Tytuł wyróżniony
+        type: string
+      - name: description
+        label: Opis
+        type: text
+      - name: trustBadges
+        label: Trust badges
+        type: string
+        list: true
+      - name: emailButtonText
+        label: Tekst przycisku email
+        type: string
+      - name: emailAddress
+        label: Adres email
+        type: string
+      - name: formEndpoint
+        label: Endpoint formularza
+        type: string
+        required: false
+      - name: formLabels
+        component: form_labels_full
+      - name: bottomNote
+        label: Notatka na dole
+        type: string
 
 content:
   - name: site
@@ -534,3 +1022,143 @@ content:
       - name: bottomNote
         label: Notatka na dole
         type: string
+
+  - name: locale_en
+    label: English Version
+    type: file
+    path: content/locales/en.json
+    format: json
+    fields:
+      - name: locale
+        label: Kod języka
+        type: string
+      - name: metadata
+        component: metadata_copy
+      - name: site
+        component: localized_site
+      - name: hero
+        component: localized_hero
+      - name: stats
+        label: Statystyki
+        type: object
+        fields:
+          - name: items
+            label: Pozycje
+            component: metric_item
+            list: true
+      - name: costCalculator
+        label: Kalkulator kosztów
+        type: object
+        fields:
+          - name: title
+            label: Tytuł
+            type: string
+          - name: fields
+            label: Pola
+            component: calculator_field
+            list: true
+          - name: totalLabel
+            label: Etykieta sumy
+            type: string
+          - name: resetLabel
+            label: Etykieta resetu
+            type: string
+          - name: localeTag
+            label: Locale tag
+            type: string
+          - name: currencyCode
+            label: Kod waluty
+            type: string
+          - name: currencySuffix
+            label: Skrót waluty
+            type: string
+      - name: problem
+        component: localized_problem
+      - name: howItWorks
+        component: localized_how_it_works
+      - name: features
+        component: localized_features
+      - name: benefits
+        component: localized_benefits
+      - name: industries
+        component: localized_industries
+      - name: testimonials
+        component: localized_testimonials
+      - name: pricing
+        component: localized_pricing
+      - name: faq
+        component: localized_faq
+      - name: cta
+        component: localized_cta
+      - name: privacy
+        component: privacy_content
+
+  - name: locale_de
+    label: German Version
+    type: file
+    path: content/locales/de.json
+    format: json
+    fields:
+      - name: locale
+        label: Kod języka
+        type: string
+      - name: metadata
+        component: metadata_copy
+      - name: site
+        component: localized_site
+      - name: hero
+        component: localized_hero
+      - name: stats
+        label: Statystyki
+        type: object
+        fields:
+          - name: items
+            label: Pozycje
+            component: metric_item
+            list: true
+      - name: costCalculator
+        label: Kalkulator kosztów
+        type: object
+        fields:
+          - name: title
+            label: Tytuł
+            type: string
+          - name: fields
+            label: Pola
+            component: calculator_field
+            list: true
+          - name: totalLabel
+            label: Etykieta sumy
+            type: string
+          - name: resetLabel
+            label: Etykieta resetu
+            type: string
+          - name: localeTag
+            label: Locale tag
+            type: string
+          - name: currencyCode
+            label: Kod waluty
+            type: string
+          - name: currencySuffix
+            label: Skrót waluty
+            type: string
+      - name: problem
+        component: localized_problem
+      - name: howItWorks
+        component: localized_how_it_works
+      - name: features
+        component: localized_features
+      - name: benefits
+        component: localized_benefits
+      - name: industries
+        component: localized_industries
+      - name: testimonials
+        component: localized_testimonials
+      - name: pricing
+        component: localized_pricing
+      - name: faq
+        component: localized_faq
+      - name: cta
+        component: localized_cta
+      - name: privacy
+        component: privacy_content
