@@ -261,6 +261,7 @@ collections:
             field: { name: text, label: "Tekst", widget: string }
           - { name: emailButtonText, label: "Tekst przycisku email", widget: string }
           - { name: emailAddress, label: "Adres email", widget: string }
+          - { name: tallyFormUrl, label: "Link formularza Tally", widget: string, required: false }
           - name: formLabels
             label: "Etykiety formularza"
             widget: object
