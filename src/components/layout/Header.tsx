@@ -32,9 +32,9 @@ export function Header({ logo, navLinks, ctaButtonText }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between">
         <a
           href="#"
-          className="flex items-center rounded-2xl bg-white/96 px-2.5 py-2 md:px-3 md:py-2.5 shadow-sm ring-1 ring-white/70 transition-transform duration-300 hover:scale-[1.01]"
+          className="flex items-center rounded-2xl bg-white/8 px-2 py-1.5 md:px-2.5 md:py-2 ring-1 ring-white/12 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.01] hover:bg-white/10"
         >
-          <div className="w-[180px] h-10 md:w-[320px] md:h-16 overflow-hidden">
+          <div className="w-[190px] h-11 md:w-[340px] md:h-[68px] overflow-hidden rounded-xl">
             <Image
               src={withBasePath(logo)}
               alt="BidSentra"

@@ -28,9 +28,9 @@ export function Footer({
             <Image
               src={withBasePath(logoWhite)}
               alt="BidSentra"
-              width={140}
-              height={36}
-              className="h-8 w-auto mb-4"
+              width={180}
+              height={46}
+              className="h-10 md:h-11 w-auto mb-5"
             />
             <p className="text-sm text-white/45 leading-relaxed max-w-[280px]">
               {footerDescription}
