@@ -30,13 +30,16 @@ export function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-3">
+        <a
+          href="#"
+          className="flex items-center rounded-2xl bg-white/96 px-3 py-2 shadow-sm ring-1 ring-white/70 transition-transform duration-300 hover:scale-[1.01]"
+        >
           <Image
-            src="/images/logo-white.png"
+            src="/images/logo-header.png"
             alt="BidSentra"
-            width={240}
-            height={60}
-            className="h-10 md:h-12 w-auto"
+            width={940}
+            height={192}
+            className="h-11 md:h-14 w-auto"
             priority
           />
         </a>
