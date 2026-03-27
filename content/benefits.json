@@ -1,0 +1,34 @@
+{
+  "sectionLabel": "Dlaczego BidSentra",
+  "title": "Wymierne korzyści dla Twojego zespołu",
+  "items": [
+    {
+      "num": "01",
+      "title": "Efektywność operacyjna",
+      "desc": "Skróć czas przygotowania ofert o 50% i obniż koszty obsługi przetargów o 30%. Twój dział ofertowania może obsłużyć dwukrotnie więcej postępowań."
+    },
+    {
+      "num": "02",
+      "title": "Bezpieczeństwo i zgodność",
+      "desc": "Automatyczna weryfikacja formalna eliminuje błędy proceduralne. Każda oferta opuszcza system jako kompletna i zgodna z PZP."
+    },
+    {
+      "num": "03",
+      "title": "Inteligencja decyzyjna",
+      "desc": "Rekomendacje oparte na danych historycznych pomagają wybrać najbardziej opłacalne przetargi i unikać tych, w których szanse są minimalne."
+    },
+    {
+      "num": "04",
+      "title": "Przewaga konkurencyjna",
+      "desc": "Działaj szybciej niż konkurencja. BidSentra to pierwsze w Polsce narzędzie łączące pełną automatyzację z lokalnymi realiami prawnymi."
+    }
+  ],
+  "kpisLabel": "Wyniki klientów BidSentra",
+  "kpis": [
+    { "label": "Redukcja czasu przygotowania ofert", "value": "−50%", "pct": 50 },
+    { "label": "Redukcja błędów formalnych", "value": "−80%", "pct": 80 },
+    { "label": "Wzrost skuteczności przetargowej", "value": "+30%", "pct": 30 },
+    { "label": "Redukcja kosztów obsługi przetargów", "value": "−30%", "pct": 30 }
+  ],
+  "quote": "Za 2 lata każdy dział ofertowy będzie wspierany przez AI. Ty możesz mieć tę przewagę już dziś."
+}

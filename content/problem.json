@@ -1,0 +1,41 @@
+{
+  "sectionLabel": "Problem, który rozwiązujemy",
+  "title": "Przetargi pochłaniają czas i zasoby",
+  "subtitle": "Firmy, które korzystają z BidSentra, składają oferty średnio 4 dni szybciej niż konkurencja.",
+  "traditionalLabel": "Tradycyjny proces",
+  "bidsentraLabel": "BidSentra",
+  "painPoints": [
+    {
+      "icon": "FileText",
+      "title": "Setki stron dokumentacji",
+      "desc": "SWZ, OPZ, PFU, JEDZ — analiza każdego przetargu wymaga czytania setek stron technicznych zapisów."
+    },
+    {
+      "icon": "Clock",
+      "title": "Tygodnie na jedną ofertę",
+      "desc": "Przygotowanie oferty do przetargu zajmuje od kilku dni do kilku tygodni, angażując cały dział ofertowania."
+    },
+    {
+      "icon": "AlertTriangle",
+      "title": "Błędy formalne = odrzucenie oferty",
+      "desc": "Jeden brakujący dokument lub niespełniony wymóg PZP przekreśla całą pracę i kosztuje utratę kontraktu."
+    },
+    {
+      "icon": "RefreshCw",
+      "title": "\"Uczymy się na nowo\" przy każdym przetargu",
+      "desc": "Wiedza z poprzednich ofert nie jest wykorzystywana — każdy nowy przetarg zaczyna się od zera."
+    }
+  ],
+  "solutions": [
+    "Lista kluczowych wymagań w kilka minut",
+    "Automatyczne sprawdzenie wymaganych kwalifikacji, referencji itp.",
+    "Identyfikacja niespójności i braków w specyfikacji",
+    "0 błędów formalnych. Pełna zgodność z PZP"
+  ],
+  "marketStats": [
+    { "val": "200k+", "lbl": "przetargów rocznie w Polsce" },
+    { "val": "~60%", "lbl": "ofert zawiera błędy formalne" },
+    { "val": "3–6 tyg.", "lbl": "czas przygotowania oferty" },
+    { "val": "PZP", "lbl": "pełna zgodność z prawem" }
+  ]
+}

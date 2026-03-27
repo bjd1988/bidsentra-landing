@@ -1,0 +1,27 @@
+{
+  "sectionLabel": "FAQ",
+  "title": "Często zadawane pytania",
+  "subtitle": "Wszystko co musisz wiedzieć o BidSentra.",
+  "items": [
+    {
+      "q": "Jakie formaty dokumentów obsługuje AI Bid Optimizer?",
+      "a": "BidSentra obecnie obsługuje PDF, DOCX oraz popularne formaty arkuszy kalkulacyjnych (XLSX, CSV). Stale rozszerzamy wsparcie formatów w oparciu o potrzeby użytkowników. Wszystkie dokumenty są przetwarzane bezpiecznie i nigdy nie są udostępniane stronom trzecim."
+    },
+    {
+      "q": "Co jest zawarte w pakiecie podstawowym?",
+      "a": "Pakiet Starter zawiera analizę dokumentacji AI/NLP, AI Draft Generator (do 10 ofert miesięcznie), Bid Score™ do oceny atrakcyjności przetargów, integrację z BZP i TED oraz wsparcie e-mail."
+    },
+    {
+      "q": "Czy BidSentra zastępuje mój zespół ofertowy?",
+      "a": "Nie. BidSentra to narzędzie wspomagające pracę Twojego zespołu ofertowego — automatyzuje żmudne, powtarzalne zadania i pozwala ekspertom skupić się na strategii i jakości oferty. System przyspiesza proces, ale decyzje podejmuje człowiek."
+    },
+    {
+      "q": "Czy moje dane przetargowe są bezpieczne?",
+      "a": "Tak. Wszystkie dane są szyfrowane w tranzycie i w spoczynku. Stosujemy najwyższe standardy bezpieczeństwa zgodne z RODO. Twoje dane nigdy nie są udostępniane stronom trzecim ani wykorzystywane do trenowania modeli AI."
+    },
+    {
+      "q": "Co dzieje się po zakończeniu okresu próbnego?",
+      "a": "Po 14-dniowym bezpłatnym trialu możesz wybrać jeden z naszych planów subskrypcyjnych lub zakończyć korzystanie z platformy. Twoje dane pozostaną dostępne do pobrania przez 30 dni po zakończeniu trialu."
+    }
+  ]
+}

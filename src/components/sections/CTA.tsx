@@ -4,13 +4,38 @@ import { useState } from "react";
 import { CheckCircle, Send, Loader2 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 
-const trustBadges = [
-  "BEZ ZOBOWIĄZAŃ",
-  "BEZPŁATNY 14-DNIOWY TRIAL",
-  "WSPARCIE PO POLSKU",
-];
+interface CTAProps {
+  title: string;
+  titleHighlight: string;
+  description: string;
+  trustBadges: string[];
+  emailButtonText: string;
+  emailAddress: string;
+  formLabels: {
+    name: string;
+    namePlaceholder: string;
+    email: string;
+    emailPlaceholder: string;
+    message: string;
+    messagePlaceholder: string;
+    submit: string;
+    sending: string;
+    thankYouTitle: string;
+    thankYouMessage: string;
+  };
+  bottomNote: string;
+}
 
-export function CTA() {
+export function CTA({
+  title,
+  titleHighlight,
+  description,
+  trustBadges,
+  emailButtonText,
+  emailAddress,
+  formLabels,
+  bottomNote,
+}: CTAProps) {
   const [formState, setFormState] = useState<"idle" | "sending" | "sent">(
     "idle"
   );
@@ -18,7 +43,6 @@ export function CTA() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormState("sending");
-    // Simulate form submission
     setTimeout(() => setFormState("sent"), 1500);
   };
 
@@ -37,12 +61,11 @@ export function CTA() {
         <FadeIn>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Gotowy wygrywać więcej{" "}
-              <span className="text-lime">przetargów?</span>
+              {title}{" "}
+              <span className="text-lime">{titleHighlight}</span>
             </h2>
             <p className="text-base text-white/70 max-w-xl mx-auto leading-relaxed">
-              Zamów 30-minutowe demo i zobacz, jak BidSentra może
-              zrewolucjonizować proces ofertowania w Twojej firmie.
+              {description}
             </p>
           </div>
         </FadeIn>
@@ -62,10 +85,10 @@ export function CTA() {
 
               <div className="pt-6">
                 <a
-                  href="mailto:kontakt@bidsentra.pl"
+                  href={`mailto:${emailAddress}`}
                   className="inline-flex items-center gap-2 bg-lime text-text-dark px-8 py-4 rounded-lg font-bold text-base hover:bg-lime-dark hover:-translate-y-0.5 transition-all"
                 >
-                  Umów rozmowę
+                  {emailButtonText}
                   <span aria-hidden>→</span>
                 </a>
               </div>
@@ -82,44 +105,44 @@ export function CTA() {
                     className="text-lime mx-auto mb-4"
                   />
                   <h3 className="text-white text-lg font-bold mb-2">
-                    Dziękujemy!
+                    {formLabels.thankYouTitle}
                   </h3>
                   <p className="text-white/70 text-sm">
-                    Wkrótce się z Tobą skontaktujemy.
+                    {formLabels.thankYouMessage}
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label className="text-xs text-white/60 font-medium block mb-1.5">
-                      Imię i Nazwisko
+                      {formLabels.name}
                     </label>
                     <input
                       type="text"
                       required
                       className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/30 text-sm focus:outline-none focus:ring-2 focus:ring-mid-teal/50 focus:border-mid-teal transition-colors"
-                      placeholder="Jan Kowalski"
+                      placeholder={formLabels.namePlaceholder}
                     />
                   </div>
                   <div>
                     <label className="text-xs text-white/60 font-medium block mb-1.5">
-                      E-mail
+                      {formLabels.email}
                     </label>
                     <input
                       type="email"
                       required
                       className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/30 text-sm focus:outline-none focus:ring-2 focus:ring-mid-teal/50 focus:border-mid-teal transition-colors"
-                      placeholder="jan@firma.pl"
+                      placeholder={formLabels.emailPlaceholder}
                     />
                   </div>
                   <div>
                     <label className="text-xs text-white/60 font-medium block mb-1.5">
-                      Treść wiadomości
+                      {formLabels.message}
                     </label>
                     <textarea
                       rows={4}
                       className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/30 text-sm focus:outline-none focus:ring-2 focus:ring-mid-teal/50 focus:border-mid-teal transition-colors resize-none"
-                      placeholder="W czym możemy pomóc?"
+                      placeholder={formLabels.messagePlaceholder}
                     />
                   </div>
                   <button
@@ -130,12 +153,12 @@ export function CTA() {
                     {formState === "sending" ? (
                       <>
                         <Loader2 size={16} className="animate-spin" />
-                        Wysyłanie...
+                        {formLabels.sending}
                       </>
                     ) : (
                       <>
                         <Send size={16} />
-                        Wyślij
+                        {formLabels.submit}
                       </>
                     )}
                   </button>
@@ -146,7 +169,7 @@ export function CTA() {
         </div>
 
         <p className="text-center text-xs text-white/40 mt-10">
-          Bez zobowiązań · Bezpłatny 14-dniowy trial · Wsparcie po polsku
+          {bottomNote}
         </p>
       </div>
     </section>

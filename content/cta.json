@@ -1,0 +1,25 @@
+{
+  "title": "Gotowy wygrywać więcej",
+  "titleHighlight": "przetargów?",
+  "description": "Zamów 30-minutowe demo i zobacz, jak BidSentra może zrewolucjonizować proces ofertowania w Twojej firmie.",
+  "trustBadges": [
+    "BEZ ZOBOWIĄZAŃ",
+    "BEZPŁATNY 14-DNIOWY TRIAL",
+    "WSPARCIE PO POLSKU"
+  ],
+  "emailButtonText": "Umów rozmowę",
+  "emailAddress": "kontakt@bidsentra.pl",
+  "formLabels": {
+    "name": "Imię i Nazwisko",
+    "namePlaceholder": "Jan Kowalski",
+    "email": "E-mail",
+    "emailPlaceholder": "jan@firma.pl",
+    "message": "Treść wiadomości",
+    "messagePlaceholder": "W czym możemy pomóc?",
+    "submit": "Wyślij",
+    "sending": "Wysyłanie...",
+    "thankYouTitle": "Dziękujemy!",
+    "thankYouMessage": "Wkrótce się z Tobą skontaktujemy."
+  },
+  "bottomNote": "Bez zobowiązań · Bezpłatny 14-dniowy trial · Wsparcie po polsku"
+}

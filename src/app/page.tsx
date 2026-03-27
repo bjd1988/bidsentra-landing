@@ -12,26 +12,67 @@ import { Pricing } from "@/components/sections/Pricing";
 import { CTA } from "@/components/sections/CTA";
 import { FAQ } from "@/components/sections/FAQ";
 import { Footer } from "@/components/layout/Footer";
+import { loadContent } from "@/lib/content";
 
-export default function Home() {
+export default async function Home() {
+  const [
+    site,
+    hero,
+    stats,
+    costCalc,
+    problem,
+    howItWorks,
+    features,
+    benefits,
+    industries,
+    testimonials,
+    pricing,
+    faq,
+    cta,
+  ] = await Promise.all([
+    loadContent("site"),
+    loadContent("hero"),
+    loadContent("stats"),
+    loadContent("cost-calculator"),
+    loadContent("problem"),
+    loadContent("how-it-works"),
+    loadContent("features"),
+    loadContent("benefits"),
+    loadContent("industries"),
+    loadContent("testimonials"),
+    loadContent("pricing"),
+    loadContent("faq"),
+    loadContent("cta"),
+  ]);
+
   return (
     <>
-      <Header />
+      <Header
+        logo={site.logo as string}
+        navLinks={site.navLinks as { href: string; label: string }[]}
+        ctaButtonText={site.ctaButtonText as string}
+      />
       <main>
-        <Hero />
-        <Stats />
-        <CostCalculator />
-        <Problem />
-        <HowItWorks />
-        <Features />
-        <Benefits />
-        <Industries />
-        <Testimonials />
-        <Pricing />
-        <FAQ />
-        <CTA />
+        <Hero {...(hero as any)} />
+        <Stats items={stats.items as any} />
+        <CostCalculator {...(costCalc as any)} />
+        <Problem {...(problem as any)} />
+        <HowItWorks {...(howItWorks as any)} />
+        <Features {...(features as any)} />
+        <Benefits {...(benefits as any)} />
+        <Industries {...(industries as any)} />
+        <Testimonials {...(testimonials as any)} />
+        <Pricing {...(pricing as any)} />
+        <FAQ {...(faq as any)} />
+        <CTA {...(cta as any)} />
       </main>
-      <Footer />
+      <Footer
+        logoWhite={site.logoWhite as string}
+        footerDescription={site.footerDescription as string}
+        footerCopyright={site.footerCopyright as string}
+        footerUrl={site.footerUrl as string}
+        footerColumns={site.footerColumns as any}
+      />
     </>
   );
 }

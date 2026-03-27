@@ -3,66 +3,39 @@
 import { Check } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 
-const plans = [
-  {
-    name: "STARTER",
-    target: "Dla MŚP",
-    featured: false,
-    features: [
-      "Analiza dokumentacji AI/NLP",
-      "AI Draft Generator (do 10 ofert/mies.)",
-      "Bid Score™ — ocena przetargów",
-      "Integracja z BZP i TED",
-      "Wsparcie e-mail",
-    ],
-    cta: "Dostępne wkrótce",
-  },
-  {
-    name: "PROFESSIONAL",
-    target: "Dla aktywnych uczestników przetargów",
-    featured: true,
-    badge: "Najpopularniejszy",
-    features: [
-      "Wszystko ze Starter",
-      "Nieograniczona liczba ofert",
-      "Repozytorium wiedzy organizacyjnej",
-      "Integracja ERP / CRM",
-      "Walidacja zgodności PZP krok po kroku",
-      "Raportowanie i analityka",
-      "Priorytetowe wsparcie",
-    ],
-    cta: "Dostępne wkrótce",
-  },
-  {
-    name: "ENTERPRISE",
-    target: "Dla dużych organizacji",
-    featured: false,
-    features: [
-      "Wszystko z Professional",
-      "Dedykowany hosting / on-premise",
-      "Integracja BIM i systemy specjalistyczne",
-      "Custom model AI na Twoich danych",
-      "Szkolenia zespołu ofertowego",
-      "Dedykowany opiekun klienta",
-    ],
-    cta: "Dostępne wkrótce",
-  },
-];
+interface PricingProps {
+  sectionLabel: string;
+  title: string;
+  subtitle: string;
+  plans: {
+    name: string;
+    target: string;
+    featured: boolean;
+    badge?: string;
+    features: string[];
+    cta: string;
+  }[];
+}
 
-export function Pricing() {
+export function Pricing({
+  sectionLabel,
+  title,
+  subtitle,
+  plans,
+}: PricingProps) {
   return (
     <section className="py-20 md:py-28 bg-white" id="cennik">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <FadeIn>
           <div className="text-center mb-14">
             <p className="text-xs font-bold tracking-[0.12em] uppercase text-mid-teal mb-3">
-              Cennik
+              {sectionLabel}
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-text-dark mb-5">
-              Dopasowany do Twoich potrzeb
+              {title}
             </h2>
             <p className="text-base text-text-mid max-w-xl mx-auto leading-relaxed">
-              Pierwsze 50 firm — cena zamrożona na 24 miesiące
+              {subtitle}
             </p>
           </div>
         </FadeIn>
@@ -83,11 +56,7 @@ export function Pricing() {
                   </div>
                 )}
 
-                <p
-                  className={`text-xs font-bold tracking-widest uppercase mb-3 ${
-                    plan.featured ? "text-mid-teal" : "text-mid-teal"
-                  }`}
-                >
+                <p className="text-xs font-bold tracking-widest uppercase mb-3 text-mid-teal">
                   {plan.name}
                 </p>
                 <h3

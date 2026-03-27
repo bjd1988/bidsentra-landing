@@ -1,0 +1,29 @@
+{
+  "sectionLabel": "Sektory i branże",
+  "title": "Stworzony dla branż, które żyją z przetargów",
+  "subtitle": "BidSentra jest dostosowany do specyfiki polskich zamówień publicznych i komercyjnych w kluczowych sektorach.",
+  "items": [
+    {
+      "icon": "Building2",
+      "title": "Budownictwo i inżynieria",
+      "desc": "Generalni wykonawcy i firmy projektowe przygotowujące kilkadziesiąt ofert rocznie o wysokiej wartości jednostkowej."
+    },
+    {
+      "icon": "Monitor",
+      "title": "Technologie IT",
+      "desc": "Software house'y i integratorzy systemów uczestniczący w przetargach na wdrożenia IT i cyfryzację administracji."
+    },
+    {
+      "icon": "Zap",
+      "title": "Energetyka i OZE",
+      "desc": "Firmy realizujące instalacje fotowoltaiczne, farmy wiatrowe i modernizacje sieci, często w modelach konsorcyjnych."
+    },
+    {
+      "icon": "Target",
+      "title": "Doradztwo przetargowe",
+      "desc": "Biura obsługujące procesy ofertowe dla innych podmiotów — zwiększ skalę i jakość usług przy krótszym czasie realizacji."
+    }
+  ],
+  "quoteText": "Na rynku nie istnieje rozwiązanie oferujące równocześnie automatyzację analizy dokumentacji, generowanie zgodnych z PZP ofert i integrację z lokalnymi platformami przetargowymi. BidSentra wypełnia tę lukę.",
+  "quoteAuthor": "Zespół BidSentra · Up To You Sp. z o.o."
+}

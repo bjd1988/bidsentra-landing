@@ -3,7 +3,32 @@
 import { motion } from "framer-motion";
 import { Shield } from "lucide-react";
 
-export function Hero() {
+interface HeroProps {
+  badge: string;
+  titleWhite: string;
+  titleHighlight: string;
+  description: string;
+  ctaPrimary: string;
+  ctaSecondary: string;
+  card: {
+    title: string;
+    rows: { label: string; value: string }[];
+    bidScore: string;
+    pzpCompliance: string;
+    docCompleteness: number;
+    winChance: number;
+  };
+}
+
+export function Hero({
+  badge,
+  titleWhite,
+  titleHighlight,
+  description,
+  ctaPrimary,
+  ctaSecondary,
+  card,
+}: HeroProps) {
   return (
     <section className="relative min-h-screen bg-dark-teal flex items-center overflow-hidden">
       {/* Background effects */}
@@ -19,18 +44,16 @@ export function Hero() {
         >
           <div className="inline-flex items-center gap-2 bg-mid-teal/15 border border-mid-teal/35 text-mid-teal px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-7">
             <Shield size={14} />
-            100% zgodności z PZP
+            {badge}
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.08] mb-6">
-            Wygrywaj więcej przetargów{" "}
-            <span className="text-lime">w połowę krótszym czasie.</span>
+            {titleWhite}{" "}
+            <span className="text-lime">{titleHighlight}</span>
           </h1>
 
           <p className="text-lg text-white/70 leading-relaxed max-w-xl mb-10">
-            BidSentra to platforma AI, która automatyzuje analizę dokumentacji
-            przetargowej, generuje oferty zgodne z PZP i ocenia szanse wygranej
-            — zanim konkurencja zdąży przeczytać SWZ.
+            {description}
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -38,7 +61,7 @@ export function Hero() {
               href="#kontakt"
               className="bg-lime text-text-dark px-8 py-4 rounded-lg font-bold text-base hover:bg-lime-dark hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(200,212,74,0.35)] transition-all inline-flex items-center gap-2"
             >
-              Zamów teraz
+              {ctaPrimary}
               <span aria-hidden>→</span>
             </a>
             <a
@@ -46,7 +69,7 @@ export function Hero() {
               className="bg-transparent text-white px-8 py-4 rounded-lg font-semibold text-base border border-white/30 hover:border-mid-teal hover:text-mid-teal transition-all inline-flex items-center gap-2"
             >
               <span aria-hidden>▷</span>
-              Jak to działa
+              {ctaSecondary}
             </a>
           </div>
         </motion.div>
@@ -64,14 +87,11 @@ export function Hero() {
               <span className="w-2.5 h-2.5 rounded-full bg-lime" />
               <span className="w-2.5 h-2.5 rounded-full bg-green-400" />
               <span className="ml-2 text-white/40 text-xs">
-                BidSentra · Analiza przetargu
+                {card.title}
               </span>
             </div>
 
-            {[
-              { label: "Przetarg:", value: "Modernizacja sieci IT" },
-              { label: "Wartość:", value: "2 400 000 PLN" },
-            ].map((row) => (
+            {card.rows.map((row) => (
               <div
                 key={row.label}
                 className="flex items-center justify-between py-3 border-b border-white/7 text-sm"
@@ -84,14 +104,14 @@ export function Hero() {
             <div className="flex items-center justify-between py-3 border-b border-white/7 text-sm">
               <span className="text-white/55">Bid Score™:</span>
               <span className="bg-lime text-text-dark px-3 py-0.5 rounded-xl text-xs font-bold">
-                82 / 100
+                {card.bidScore}
               </span>
             </div>
 
             <div className="flex items-center justify-between py-3 border-b border-white/7 text-sm">
               <span className="text-white/55">Zgodność PZP:</span>
               <span className="bg-mid-teal/20 text-mid-teal px-3 py-0.5 rounded-xl text-xs font-semibold">
-                ✓ Wysoka
+                {card.pzpCompliance}
               </span>
             </div>
 
@@ -102,10 +122,10 @@ export function Hero() {
               <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
                 <div
                   className="h-full rounded-full bg-gradient-to-r from-mid-teal to-lime"
-                  style={{ width: "87%" }}
+                  style={{ width: `${card.docCompleteness}%` }}
                 />
               </div>
-              <div className="text-xs text-white/50 text-right mt-1">87%</div>
+              <div className="text-xs text-white/50 text-right mt-1">{card.docCompleteness}%</div>
             </div>
 
             <div className="pt-2">
@@ -115,10 +135,10 @@ export function Hero() {
               <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
                 <div
                   className="h-full rounded-full bg-gradient-to-r from-mid-teal to-lime"
-                  style={{ width: "73%" }}
+                  style={{ width: `${card.winChance}%` }}
                 />
               </div>
-              <div className="text-xs text-white/50 text-right mt-1">73%</div>
+              <div className="text-xs text-white/50 text-right mt-1">{card.winChance}%</div>
             </div>
           </div>
         </motion.div>

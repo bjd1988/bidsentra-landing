@@ -4,30 +4,14 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 
-const faqs = [
-  {
-    q: "Jakie formaty dokumentów obsługuje AI Bid Optimizer?",
-    a: "BidSentra obecnie obsługuje PDF, DOCX oraz popularne formaty arkuszy kalkulacyjnych (XLSX, CSV). Stale rozszerzamy wsparcie formatów w oparciu o potrzeby użytkowników. Wszystkie dokumenty są przetwarzane bezpiecznie i nigdy nie są udostępniane stronom trzecim.",
-  },
-  {
-    q: "Co jest zawarte w pakiecie podstawowym?",
-    a: "Pakiet Starter zawiera analizę dokumentacji AI/NLP, AI Draft Generator (do 10 ofert miesięcznie), Bid Score™ do oceny atrakcyjności przetargów, integrację z BZP i TED oraz wsparcie e-mail.",
-  },
-  {
-    q: "Czy BidSentra zastępuje mój zespół ofertowy?",
-    a: "Nie. BidSentra to narzędzie wspomagające pracę Twojego zespołu ofertowego — automatyzuje żmudne, powtarzalne zadania i pozwala ekspertom skupić się na strategii i jakości oferty. System przyspiesza proces, ale decyzje podejmuje człowiek.",
-  },
-  {
-    q: "Czy moje dane przetargowe są bezpieczne?",
-    a: "Tak. Wszystkie dane są szyfrowane w tranzycie i w spoczynku. Stosujemy najwyższe standardy bezpieczeństwa zgodne z RODO. Twoje dane nigdy nie są udostępniane stronom trzecim ani wykorzystywane do trenowania modeli AI.",
-  },
-  {
-    q: "Co dzieje się po zakończeniu okresu próbnego?",
-    a: "Po 14-dniowym bezpłatnym trialu możesz wybrać jeden z naszych planów subskrypcyjnych lub zakończyć korzystanie z platformy. Twoje dane pozostaną dostępne do pobrania przez 30 dni po zakończeniu trialu.",
-  },
-];
+interface FAQProps {
+  sectionLabel: string;
+  title: string;
+  subtitle: string;
+  items: { q: string; a: string }[];
+}
 
-export function FAQ() {
+export function FAQ({ sectionLabel, title, subtitle, items }: FAQProps) {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
@@ -36,19 +20,19 @@ export function FAQ() {
         <FadeIn>
           <div className="text-center mb-14">
             <p className="text-xs font-bold tracking-[0.12em] uppercase text-mid-teal mb-3">
-              FAQ
+              {sectionLabel}
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-text-dark mb-5">
-              Często zadawane pytania
+              {title}
             </h2>
             <p className="text-base text-text-mid leading-relaxed">
-              Wszystko co musisz wiedzieć o BidSentra.
+              {subtitle}
             </p>
           </div>
         </FadeIn>
 
         <div className="space-y-3">
-          {faqs.map((faq, i) => (
+          {items.map((faq, i) => (
             <FadeIn key={i} delay={i * 0.05}>
               <div className="bg-white rounded-xl border border-light-gray overflow-hidden">
                 <button

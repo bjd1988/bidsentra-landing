@@ -4,14 +4,13 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
-const navLinks = [
-  { href: "#jak-dziala", label: "Jak to działa" },
-  { href: "#korzysci", label: "Co zyskujesz" },
-  { href: "#cennik", label: "Cennik" },
-  { href: "#faq", label: "FAQ" },
-];
+interface HeaderProps {
+  logo: string;
+  navLinks: { href: string; label: string }[];
+  ctaButtonText: string;
+}
 
-export function Header() {
+export function Header({ logo, navLinks, ctaButtonText }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -35,7 +34,7 @@ export function Header() {
           className="flex items-center rounded-2xl bg-white/96 px-3 py-2 shadow-sm ring-1 ring-white/70 transition-transform duration-300 hover:scale-[1.01]"
         >
           <Image
-            src="/images/logo-header.png"
+            src={logo}
             alt="BidSentra"
             width={940}
             height={192}
@@ -59,7 +58,7 @@ export function Header() {
             href="#kontakt"
             className="bg-lime text-text-dark px-5 py-2.5 rounded-lg font-bold text-sm hover:bg-lime-dark transition-colors"
           >
-            Zamów teraz
+            {ctaButtonText}
           </a>
         </div>
 
@@ -91,7 +90,7 @@ export function Header() {
             onClick={() => setMobileOpen(false)}
             className="block mt-3 bg-lime text-text-dark px-5 py-2.5 rounded-lg font-bold text-sm text-center hover:bg-lime-dark transition-colors"
           >
-            Zamów teraz
+            {ctaButtonText}
           </a>
         </div>
       )}

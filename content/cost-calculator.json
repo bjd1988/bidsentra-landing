@@ -1,0 +1,10 @@
+{
+  "title": "Ile kosztuje Cię jeden przegrany przetarg?",
+  "fields": [
+    { "label": "Czas zespołu", "key": "teamTime", "defaultValue": 4630 },
+    { "label": "Koszty pracy", "key": "laborCost", "defaultValue": 424 },
+    { "label": "Utracona marża", "key": "lostMargin", "defaultValue": 330 }
+  ],
+  "totalLabel": "Całkowity koszt",
+  "resetLabel": "Resetuj wartości"
+}

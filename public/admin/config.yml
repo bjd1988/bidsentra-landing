@@ -1,0 +1,274 @@
+backend:
+  name: github
+  repo: bjd1988/bidsentra-landing
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "settings"
+    label: "Ustawienia strony"
+    files:
+      - name: "site"
+        label: "Ogólne (logo, nawigacja, stopka)"
+        file: "content/site.json"
+        fields:
+          - { name: siteName, label: "Nazwa strony", widget: string }
+          - { name: logo, label: "Logo (nagłówek)", widget: image }
+          - { name: logoWhite, label: "Logo (stopka, białe)", widget: image }
+          - name: navLinks
+            label: "Linki nawigacji"
+            widget: list
+            fields:
+              - { name: href, label: "Link (anchor)", widget: string }
+              - { name: label, label: "Tekst", widget: string }
+          - { name: ctaButtonText, label: "Tekst przycisku CTA", widget: string }
+          - { name: footerDescription, label: "Opis w stopce", widget: text }
+          - { name: footerCopyright, label: "Copyright", widget: string }
+          - { name: footerUrl, label: "URL strony", widget: string }
+          - name: footerColumns
+            label: "Kolumny stopki"
+            widget: list
+            fields:
+              - { name: title, label: "Tytuł kolumny", widget: string }
+              - name: links
+                label: "Linki"
+                widget: list
+                fields:
+                  - { name: label, label: "Tekst", widget: string }
+                  - { name: href, label: "Link", widget: string }
+
+  - name: "sections"
+    label: "Sekcje strony"
+    files:
+      - name: "hero"
+        label: "Hero (główna sekcja)"
+        file: "content/hero.json"
+        fields:
+          - { name: badge, label: "Badge (nad tytułem)", widget: string }
+          - { name: titleWhite, label: "Tytuł (biały tekst)", widget: string }
+          - { name: titleHighlight, label: "Tytuł (wyróżniony tekst)", widget: string }
+          - { name: description, label: "Opis", widget: text }
+          - { name: ctaPrimary, label: "Przycisk główny", widget: string }
+          - { name: ctaSecondary, label: "Przycisk drugi", widget: string }
+          - name: card
+            label: "Karta demo (prawa strona)"
+            widget: object
+            fields:
+              - { name: title, label: "Tytuł karty", widget: string }
+              - name: rows
+                label: "Wiersze danych"
+                widget: list
+                fields:
+                  - { name: label, label: "Etykieta", widget: string }
+                  - { name: value, label: "Wartość", widget: string }
+              - { name: bidScore, label: "Bid Score", widget: string }
+              - { name: pzpCompliance, label: "Zgodność PZP", widget: string }
+              - { name: docCompleteness, label: "Kompletność dokumentacji (%)", widget: number }
+              - { name: winChance, label: "Szanse wygranej (%)", widget: number }
+
+      - name: "stats"
+        label: "Statystyki"
+        file: "content/stats.json"
+        fields:
+          - name: items
+            label: "Statystyki"
+            widget: list
+            fields:
+              - { name: value, label: "Wartość (np. 50%)", widget: string }
+              - { name: label, label: "Opis", widget: string }
+
+      - name: "cost-calculator"
+        label: "Kalkulator kosztów"
+        file: "content/cost-calculator.json"
+        fields:
+          - { name: title, label: "Tytuł", widget: string }
+          - name: fields
+            label: "Pola kalkulatora"
+            widget: list
+            fields:
+              - { name: label, label: "Etykieta", widget: string }
+              - { name: key, label: "Klucz (bez spacji)", widget: string }
+              - { name: defaultValue, label: "Domyślna wartość (PLN)", widget: number }
+          - { name: totalLabel, label: "Etykieta sumy", widget: string }
+          - { name: resetLabel, label: "Tekst resetu", widget: string }
+
+      - name: "problem"
+        label: "Problem i rozwiązanie"
+        file: "content/problem.json"
+        fields:
+          - { name: sectionLabel, label: "Etykieta sekcji", widget: string }
+          - { name: title, label: "Tytuł", widget: string }
+          - { name: subtitle, label: "Podtytuł", widget: text }
+          - { name: traditionalLabel, label: "Etykieta tradycyjny proces", widget: string }
+          - { name: bidsentraLabel, label: "Etykieta BidSentra", widget: string }
+          - name: painPoints
+            label: "Problemy"
+            widget: list
+            fields:
+              - { name: icon, label: "Ikona (FileText, Clock, AlertTriangle, RefreshCw)", widget: string }
+              - { name: title, label: "Tytuł", widget: string }
+              - { name: desc, label: "Opis", widget: text }
+          - name: solutions
+            label: "Rozwiązania"
+            widget: list
+            field: { name: text, label: "Tekst", widget: string }
+          - name: marketStats
+            label: "Statystyki rynku"
+            widget: list
+            fields:
+              - { name: val, label: "Wartość", widget: string }
+              - { name: lbl, label: "Opis", widget: string }
+
+      - name: "how-it-works"
+        label: "Jak to działa"
+        file: "content/how-it-works.json"
+        fields:
+          - { name: sectionLabel, label: "Etykieta sekcji", widget: string }
+          - { name: title, label: "Tytuł", widget: string }
+          - { name: subtitle, label: "Podtytuł", widget: text }
+          - name: steps
+            label: "Kroki"
+            widget: list
+            fields:
+              - { name: num, label: "Numer (01, 02...)", widget: string }
+              - { name: icon, label: "Ikona (Upload, Brain, BarChart3, FileOutput)", widget: string }
+              - { name: title, label: "Tytuł", widget: string }
+              - { name: desc, label: "Opis", widget: text }
+
+      - name: "features"
+        label: "Funkcjonalności"
+        file: "content/features.json"
+        fields:
+          - { name: sectionLabel, label: "Etykieta sekcji", widget: string }
+          - { name: title, label: "Tytuł", widget: string }
+          - { name: subtitle, label: "Podtytuł", widget: text }
+          - name: items
+            label: "Funkcje"
+            widget: list
+            fields:
+              - { name: icon, label: "Ikona (Search, FileEdit, BarChart3, Link2, BookOpen, ShieldCheck)", widget: string }
+              - { name: title, label: "Tytuł", widget: string }
+              - { name: desc, label: "Opis", widget: text }
+              - { name: tag, label: "Tag", widget: string }
+
+      - name: "benefits"
+        label: "Korzyści"
+        file: "content/benefits.json"
+        fields:
+          - { name: sectionLabel, label: "Etykieta sekcji", widget: string }
+          - { name: title, label: "Tytuł", widget: string }
+          - name: items
+            label: "Korzyści"
+            widget: list
+            fields:
+              - { name: num, label: "Numer (01, 02...)", widget: string }
+              - { name: title, label: "Tytuł", widget: string }
+              - { name: desc, label: "Opis", widget: text }
+          - { name: kpisLabel, label: "Nagłówek KPI", widget: string }
+          - name: kpis
+            label: "Wskaźniki KPI"
+            widget: list
+            fields:
+              - { name: label, label: "Etykieta", widget: string }
+              - { name: value, label: "Wartość (np. −50%)", widget: string }
+              - { name: pct, label: "Procent (0-100)", widget: number }
+          - { name: quote, label: "Cytat", widget: text }
+
+      - name: "industries"
+        label: "Branże"
+        file: "content/industries.json"
+        fields:
+          - { name: sectionLabel, label: "Etykieta sekcji", widget: string }
+          - { name: title, label: "Tytuł", widget: string }
+          - { name: subtitle, label: "Podtytuł", widget: text }
+          - name: items
+            label: "Branże"
+            widget: list
+            fields:
+              - { name: icon, label: "Ikona (Building2, Monitor, Zap, Target)", widget: string }
+              - { name: title, label: "Tytuł", widget: string }
+              - { name: desc, label: "Opis", widget: text }
+          - { name: quoteText, label: "Cytat", widget: text }
+          - { name: quoteAuthor, label: "Autor cytatu", widget: string }
+
+      - name: "testimonials"
+        label: "Referencje"
+        file: "content/testimonials.json"
+        fields:
+          - { name: sectionLabel, label: "Etykieta sekcji", widget: string }
+          - { name: title, label: "Tytuł", widget: string }
+          - { name: disclaimer, label: "Disclaimer", widget: string }
+          - name: items
+            label: "Opinie"
+            widget: list
+            fields:
+              - { name: quote, label: "Cytat", widget: text }
+              - { name: name, label: "Imię i nazwisko", widget: string }
+              - { name: role, label: "Stanowisko", widget: string }
+              - { name: company, label: "Firma", widget: string }
+
+      - name: "pricing"
+        label: "Cennik"
+        file: "content/pricing.json"
+        fields:
+          - { name: sectionLabel, label: "Etykieta sekcji", widget: string }
+          - { name: title, label: "Tytuł", widget: string }
+          - { name: subtitle, label: "Podtytuł", widget: text }
+          - name: plans
+            label: "Plany cenowe"
+            widget: list
+            fields:
+              - { name: name, label: "Nazwa planu", widget: string }
+              - { name: target, label: "Dla kogo", widget: string }
+              - { name: featured, label: "Wyróżniony?", widget: boolean, default: false }
+              - { name: badge, label: "Badge (opcjonalny)", widget: string, required: false }
+              - name: features
+                label: "Funkcje"
+                widget: list
+                field: { name: text, label: "Tekst", widget: string }
+              - { name: cta, label: "Tekst przycisku", widget: string }
+
+      - name: "faq"
+        label: "FAQ"
+        file: "content/faq.json"
+        fields:
+          - { name: sectionLabel, label: "Etykieta sekcji", widget: string }
+          - { name: title, label: "Tytuł", widget: string }
+          - { name: subtitle, label: "Podtytuł", widget: string }
+          - name: items
+            label: "Pytania i odpowiedzi"
+            widget: list
+            fields:
+              - { name: q, label: "Pytanie", widget: string }
+              - { name: a, label: "Odpowiedź", widget: text }
+
+      - name: "cta"
+        label: "Kontakt / CTA"
+        file: "content/cta.json"
+        fields:
+          - { name: title, label: "Tytuł", widget: string }
+          - { name: titleHighlight, label: "Tytuł (wyróżniony)", widget: string }
+          - { name: description, label: "Opis", widget: text }
+          - name: trustBadges
+            label: "Trust badges"
+            widget: list
+            field: { name: text, label: "Tekst", widget: string }
+          - { name: emailButtonText, label: "Tekst przycisku email", widget: string }
+          - { name: emailAddress, label: "Adres email", widget: string }
+          - name: formLabels
+            label: "Etykiety formularza"
+            widget: object
+            fields:
+              - { name: name, label: "Etykieta: Imię", widget: string }
+              - { name: namePlaceholder, label: "Placeholder: Imię", widget: string }
+              - { name: email, label: "Etykieta: Email", widget: string }
+              - { name: emailPlaceholder, label: "Placeholder: Email", widget: string }
+              - { name: message, label: "Etykieta: Wiadomość", widget: string }
+              - { name: messagePlaceholder, label: "Placeholder: Wiadomość", widget: string }
+              - { name: submit, label: "Przycisk: Wyślij", widget: string }
+              - { name: sending, label: "Tekst: Wysyłanie", widget: string }
+              - { name: thankYouTitle, label: "Tytuł podziękowania", widget: string }
+              - { name: thankYouMessage, label: "Treść podziękowania", widget: string }
+          - { name: bottomNote, label: "Notatka na dole", widget: string }

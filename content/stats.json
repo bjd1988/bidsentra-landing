@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "value": "50%", "label": "Mniej czasu na oferty" },
+    { "value": "80%", "label": "Mniej błędów formalnych" },
+    { "value": "+30%", "label": "Skuteczność przetargowa" }
+  ]
+}

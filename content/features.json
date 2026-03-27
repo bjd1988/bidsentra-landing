@@ -1,0 +1,43 @@
+{
+  "sectionLabel": "Kluczowe funkcjonalności",
+  "title": "Technologia, która zmienia zasady gry",
+  "subtitle": "BidSentra łączy zaawansowane AI z praktyczną znajomością polskiego rynku zamówień publicznych.",
+  "items": [
+    {
+      "icon": "Search",
+      "title": "Analiza semantyczna dokumentów (NLP)",
+      "desc": "System rozumie kontekst zapisów prawnych, klasyfikuje wymagania i automatycznie identyfikuje ryzyka w dokumentacji przetargowej.",
+      "tag": "AI / NLP"
+    },
+    {
+      "icon": "FileEdit",
+      "title": "AI Draft Generator",
+      "desc": "Automatyczne tworzenie struktury i treści ofert zgodnych z PZP. System łączy dane przetargowe z Twoimi referencjami i certyfikatami.",
+      "tag": "RAG Architecture"
+    },
+    {
+      "icon": "BarChart3",
+      "title": "Bid Score™ — scoring ML",
+      "desc": "Innowacyjny algorytm ML rekomenduje optymalne strategie przetargowe na podstawie danych.",
+      "tag": "Machine Learning"
+    },
+    {
+      "icon": "Link2",
+      "title": "Integracje ERP / CRM / BIM",
+      "desc": "Otwarte API umożliwia integrację z istniejącymi systemami. Dane o kosztach i zasobach automatycznie zasilają proces ofertowania.",
+      "tag": "API First"
+    },
+    {
+      "icon": "BookOpen",
+      "title": "Repozytorium wiedzy organizacyjnej",
+      "desc": "System uczy się na historii Twoich ofert, stopniowo poprawiając jakość rekomendacji i przewidywanie ryzyk projektowych.",
+      "tag": "Self-learning"
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Walidacja zgodności z PZP",
+      "desc": "Automatyczna weryfikacja kompletności dokumentów i zgodności z wymogami zamawiającego — eliminuje błędy skutkujące odrzuceniem oferty.",
+      "tag": "Compliance"
+    }
+  ]
+}

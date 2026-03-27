@@ -1,0 +1,25 @@
+{
+  "sectionLabel": "Referencje",
+  "title": "Co mówią o nas partnerzy",
+  "disclaimer": "* Dane przykładowe — prawdziwe referencje wkrótce",
+  "items": [
+    {
+      "quote": "BidSentra zrewolucjonizowało nasz proces ofertowania. Czas przygotowania ofert skrócił się o połowę.",
+      "name": "Jan Kowalski",
+      "role": "Dyrektor Ofertowania",
+      "company": "Firma Budowlana Sp. z o.o."
+    },
+    {
+      "quote": "Eliminacja błędów formalnych to dla nas kluczowa wartość. Żadna oferta nie została odrzucona od czasu wdrożenia.",
+      "name": "Anna Nowak",
+      "role": "Kierownik Działu Przetargów",
+      "company": "IT Solutions S.A."
+    },
+    {
+      "quote": "Bid Score™ pozwala nam skupić się na przetargach, gdzie mamy realne szanse na wygraną. Skuteczność wzrosła o 35%.",
+      "name": "Piotr Wiśniewski",
+      "role": "Prezes Zarządu",
+      "company": "Doradztwo Przetargowe Plus"
+    }
+  ]
+}

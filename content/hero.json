@@ -1,0 +1,19 @@
+{
+  "badge": "100% zgodności z PZP",
+  "titleWhite": "Wygrywaj więcej przetargów",
+  "titleHighlight": "w połowę krótszym czasie.",
+  "description": "BidSentra to platforma AI, która automatyzuje analizę dokumentacji przetargowej, generuje oferty zgodne z PZP i ocenia szanse wygranej — zanim konkurencja zdąży przeczytać SWZ.",
+  "ctaPrimary": "Zamów teraz",
+  "ctaSecondary": "Jak to działa",
+  "card": {
+    "title": "BidSentra · Analiza przetargu",
+    "rows": [
+      { "label": "Przetarg:", "value": "Modernizacja sieci IT" },
+      { "label": "Wartość:", "value": "2 400 000 PLN" }
+    ],
+    "bidScore": "82 / 100",
+    "pzpCompliance": "✓ Wysoka",
+    "docCompleteness": 87,
+    "winChance": 73
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "siteName": "BidSentra",
+  "logo": "/images/logo-header.png",
+  "logoWhite": "/images/logo-white.png",
+  "navLinks": [
+    { "href": "#jak-dziala", "label": "Jak to działa" },
+    { "href": "#korzysci", "label": "Co zyskujesz" },
+    { "href": "#cennik", "label": "Cennik" },
+    { "href": "#faq", "label": "FAQ" }
+  ],
+  "ctaButtonText": "Zamów teraz",
+  "footerDescription": "Your central hub for smarter bidding. AI-powered B2B procurement automation dla polskiego rynku.",
+  "footerCopyright": "© 2026 BidSentra · Up To You Sp. z o.o.",
+  "footerUrl": "bidsentra.pl",
+  "footerColumns": [
+    {
+      "title": "PRODUKT",
+      "links": [
+        { "label": "Jak to działa", "href": "#jak-dziala" },
+        { "label": "Co zyskujesz", "href": "#korzysci" },
+        { "label": "Cennik", "href": "#cennik" },
+        { "label": "FAQ", "href": "#faq" }
+      ]
+    },
+    {
+      "title": "SEKTORY",
+      "links": [
+        { "label": "Budownictwo i inżynieria", "href": "#sektory" },
+        { "label": "Technologie IT", "href": "#sektory" },
+        { "label": "Energetyka i OZE", "href": "#sektory" },
+        { "label": "Doradztwo przetargowe", "href": "#sektory" }
+      ]
+    },
+    {
+      "title": "FIRMA",
+      "links": [
+        { "label": "Kontakt", "href": "#kontakt" },
+        { "label": "Polityka prywatności", "href": "#" },
+        { "label": "Regulamin", "href": "#" },
+        { "label": "Publikacje", "href": "#" }
+      ]
+    }
+  ]
+}

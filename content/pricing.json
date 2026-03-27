@@ -1,0 +1,50 @@
+{
+  "sectionLabel": "Cennik",
+  "title": "Dopasowany do Twoich potrzeb",
+  "subtitle": "Pierwsze 50 firm — cena zamrożona na 24 miesiące",
+  "plans": [
+    {
+      "name": "STARTER",
+      "target": "Dla MŚP",
+      "featured": false,
+      "features": [
+        "Analiza dokumentacji AI/NLP",
+        "AI Draft Generator (do 10 ofert/mies.)",
+        "Bid Score™ — ocena przetargów",
+        "Integracja z BZP i TED",
+        "Wsparcie e-mail"
+      ],
+      "cta": "Dostępne wkrótce"
+    },
+    {
+      "name": "PROFESSIONAL",
+      "target": "Dla aktywnych uczestników przetargów",
+      "featured": true,
+      "badge": "Najpopularniejszy",
+      "features": [
+        "Wszystko ze Starter",
+        "Nieograniczona liczba ofert",
+        "Repozytorium wiedzy organizacyjnej",
+        "Integracja ERP / CRM",
+        "Walidacja zgodności PZP krok po kroku",
+        "Raportowanie i analityka",
+        "Priorytetowe wsparcie"
+      ],
+      "cta": "Dostępne wkrótce"
+    },
+    {
+      "name": "ENTERPRISE",
+      "target": "Dla dużych organizacji",
+      "featured": false,
+      "features": [
+        "Wszystko z Professional",
+        "Dedykowany hosting / on-premise",
+        "Integracja BIM i systemy specjalistyczne",
+        "Custom model AI na Twoich danych",
+        "Szkolenia zespołu ofertowego",
+        "Dedykowany opiekun klienta"
+      ],
+      "cta": "Dostępne wkrótce"
+    }
+  ]
+}
