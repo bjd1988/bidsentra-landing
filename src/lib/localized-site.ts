@@ -14,6 +14,7 @@ import statsPl from "../../content/stats.json";
 import testimonialsPl from "../../content/testimonials.json";
 import deLocale from "../../content/locales/de.json";
 import enLocale from "../../content/locales/en.json";
+import plPrivacyLocale from "../../content/locales/pl-privacy.json";
 
 export type LocaleCode = "pl" | "en" | "de";
 
@@ -181,14 +182,7 @@ function withLegalAnchorPrefix(columns: FooterColumn[], homePath: string) {
 
 const plBundle: PageBundle = {
   locale: "pl",
-  metadata: {
-    homeTitle: "BidSentra – Wygrywaj więcej przetargów z AI",
-    homeDescription:
-      "BidSentra to platforma AI, która automatyzuje analizę dokumentacji przetargowej, generuje oferty zgodne z PZP i ocenia szanse wygranej.",
-    privacyTitle: "Polityka prywatności | BidSentra",
-    privacyDescription:
-      "Informacje o przetwarzaniu danych osobowych i zasadach korzystania z formularza kontaktowego w serwisie BidSentra.",
-  },
+  metadata: plPrivacyLocale.metadata,
   site: sitePl,
   hero: {
     ...heroPl,
@@ -226,95 +220,7 @@ const plBundle: PageBundle = {
       backToForm: "Wróć do formularza",
     },
   },
-  privacy: {
-    badge: "Ochrona danych",
-    title: "Polityka prywatności BidSentra",
-    intro:
-      "Poniżej znajdziesz informacje o tym, jak przetwarzamy dane osobowe w związku z korzystaniem z serwisu BidSentra i formularza kontaktowego.",
-    updatedLabel: "Aktualizacja",
-    updatedDate: "27 marca 2026 r.",
-    sourceNote:
-      "Dane administratora opracowano na podstawie załączonego odpisu aktualnego z KRS nr 0001221405 oraz aktualnej konfiguracji serwisu.",
-    adminCardTitle: "Administrator",
-    adminContactLabel: "Kontakt w sprawach danych:",
-    sections: [
-      {
-        title: "1. Administrator danych",
-        paragraphs: [
-          "Administratorem Twoich danych osobowych jest UP TO YOU spółka z ograniczoną odpowiedzialnością z siedzibą w Lublinie, ul. Gospodarcza 26, 20-213 Lublin, wpisana do Rejestru Przedsiębiorców Krajowego Rejestru Sądowego pod numerem KRS 0001221405, NIP 9462763547, REGON 543872521.",
-          "We wszystkich sprawach związanych z ochroną danych osobowych możesz skontaktować się z nami pod adresem e-mail: info@bidsentra.pl.",
-        ],
-      },
-      {
-        title: "2. Zakres i źródła danych",
-        paragraphs: [
-          "Przetwarzamy dane, które podajesz nam dobrowolnie podczas korzystania z formularza kontaktowego lub kontaktu e-mailowego, w szczególności imię i nazwisko, adres e-mail oraz treść wiadomości.",
-          "W związku z korzystaniem z serwisu mogą być też przetwarzane podstawowe dane techniczne, takie jak adres IP, data i godzina żądania, dane o przeglądarce i urządzeniu oraz logi niezbędne do zapewnienia bezpieczeństwa i poprawnego działania strony.",
-        ],
-      },
-      {
-        title: "3. Cele i podstawy prawne przetwarzania",
-        paragraphs: [
-          "Dane przetwarzamy w celu udzielenia odpowiedzi na Twoją wiadomość, obsługi zapytania o ofertę, demo lub współpracę oraz prowadzenia dalszej korespondencji związanej z tym kontaktem.",
-          "Podstawą prawną przetwarzania jest art. 6 ust. 1 lit. b RODO, jeżeli kontakt zmierza do zawarcia umowy lub podjęcia działań przed jej zawarciem, oraz art. 6 ust. 1 lit. f RODO, czyli nasz prawnie uzasadniony interes polegający na obsłudze korespondencji, zapewnieniu bezpieczeństwa serwisu oraz obronie przed ewentualnymi roszczeniami.",
-          "Jeżeli przekazujesz nam w wiadomości dodatkowe dane, robisz to z własnej inicjatywy. Prosimy, aby nie przesyłać danych, których nie potrzebujemy do obsługi kontaktu.",
-        ],
-      },
-      {
-        title: "4. Czy podanie danych jest obowiązkowe",
-        paragraphs: [
-          "Podanie danych w formularzu kontaktowym jest dobrowolne, ale niezbędne do otrzymania odpowiedzi. Brak podania danych może uniemożliwić obsługę Twojego zapytania.",
-        ],
-      },
-      {
-        title: "5. Odbiorcy danych",
-        paragraphs: [
-          "Twoje dane mogą być ujawniane podmiotom, z których korzystamy przy prowadzeniu serwisu i obsłudze kontaktu, w szczególności dostawcy hostingu statycznej strony, dostawcy infrastruktury sieciowej oraz dostawcy usługi wysyłki wiadomości e-mail.",
-          "Na dzień publikacji tej polityki korzystamy w tym zakresie w szczególności z usług GitHub Pages, Cloudflare oraz Brevo. Podmioty te przetwarzają dane na nasze zlecenie albo jako odrębni administratorzy w zakresie niezbędnym do realizacji swoich usług.",
-        ],
-      },
-      {
-        title: "6. Przekazywanie danych poza EOG",
-        paragraphs: [
-          "W związku z korzystaniem z niektórych dostawców technologicznych dane mogą być przekazywane poza Europejski Obszar Gospodarczy. W takim przypadku dbamy o to, aby przekazanie odbywało się zgodnie z prawem, w szczególności na podstawie standardowych klauzul umownych, decyzji stwierdzających odpowiedni stopień ochrony lub innych dopuszczalnych mechanizmów.",
-        ],
-      },
-      {
-        title: "7. Okres przechowywania danych",
-        paragraphs: [
-          "Dane z korespondencji przechowujemy przez okres niezbędny do obsługi sprawy, a następnie przez czas potrzebny do wykazania prawidłowości naszej obsługi lub obrony przed roszczeniami, nie dłużej jednak niż do upływu właściwych terminów przedawnienia, chyba że dłuższy okres przechowywania wynika z przepisów prawa.",
-          "Dane techniczne i logi serwisowe przechowujemy przez okres potrzebny do zapewnienia bezpieczeństwa, wykrywania nadużyć i utrzymania ciągłości działania usług, zgodnie z konfiguracją oraz politykami naszych dostawców.",
-        ],
-      },
-      {
-        title: "8. Twoje prawa",
-        paragraphs: [
-          "Masz prawo żądać dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, a także prawo do wniesienia sprzeciwu wobec przetwarzania opartego na naszym prawnie uzasadnionym interesie.",
-          "W zakresie, w jakim podstawą przetwarzania jest art. 6 ust. 1 lit. b RODO, możesz również żądać przeniesienia danych.",
-          "Masz również prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych, jeśli uznasz, że Twoje dane są przetwarzane niezgodnie z prawem.",
-        ],
-      },
-      {
-        title: "9. Zautomatyzowane podejmowanie decyzji",
-        paragraphs: [
-          "Dane przekazywane przez formularz kontaktowy nie są wykorzystywane do podejmowania wobec Ciebie decyzji w sposób zautomatyzowany, w tym do profilowania w rozumieniu RODO.",
-        ],
-      },
-      {
-        title: "10. Pliki cookies i podobne technologie",
-        paragraphs: [
-          "Na dzień publikacji tej polityki serwis nie wykorzystuje własnych plików cookies ani podobnych technologii do celów analitycznych lub marketingowych, które wymagałyby uzyskania Twojej zgody.",
-          "Podczas korzystania ze strony Twoja przeglądarka i infrastruktura techniczna mogą jednak przetwarzać dane niezbędne do wyświetlenia strony, zapewnienia bezpieczeństwa transmisji oraz obsługi żądań HTTP. Jeżeli w przyszłości wdrożymy narzędzia analityczne, reklamowe albo inne rozwiązania korzystające z niekoniecznych cookies, przed ich uruchomieniem wdrożymy odpowiedni mechanizm zgód i zaktualizujemy tę politykę.",
-        ],
-      },
-      {
-        title: "11. Zmiany polityki prywatności",
-        paragraphs: [
-          "Polityka prywatności może być aktualizowana, jeżeli zmieni się sposób działania serwisu, zakres przetwarzanych danych albo obowiązujące przepisy prawa. Aktualna wersja jest zawsze publikowana na tej stronie.",
-        ],
-      },
-    ],
-  },
+  privacy: plPrivacyLocale.privacy,
 };
 
 const bundles: Record<LocaleCode, PageBundle> = {

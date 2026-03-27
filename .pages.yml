@@ -1023,6 +1023,17 @@ content:
         label: Notatka na dole
         type: string
 
+  - name: locale_pl_privacy
+    label: Polish Privacy Policy
+    type: file
+    path: content/locales/pl-privacy.json
+    format: json
+    fields:
+      - name: metadata
+        component: metadata_copy
+      - name: privacy
+        component: privacy_content
+
   - name: locale_en
     label: English Version
     type: file
