@@ -17,6 +17,10 @@ interface HeroProps {
     pzpCompliance: string;
     docCompleteness: number;
     winChance: number;
+    bidScoreLabel: string;
+    complianceLabel: string;
+    docCompletenessLabel: string;
+    winChanceLabel: string;
   };
 }
 
@@ -102,23 +106,21 @@ export function Hero({
             ))}
 
             <div className="flex items-center justify-between py-3 border-b border-white/7 text-sm">
-              <span className="text-white/55">Bid Score™:</span>
+              <span className="text-white/55">{card.bidScoreLabel}:</span>
               <span className="bg-lime text-text-dark px-3 py-0.5 rounded-xl text-xs font-bold">
                 {card.bidScore}
               </span>
             </div>
 
             <div className="flex items-center justify-between py-3 border-b border-white/7 text-sm">
-              <span className="text-white/55">Zgodność PZP:</span>
+              <span className="text-white/55">{card.complianceLabel}:</span>
               <span className="bg-mid-teal/20 text-mid-teal px-3 py-0.5 rounded-xl text-xs font-semibold">
                 {card.pzpCompliance}
               </span>
             </div>
 
             <div className="pt-4">
-              <div className="text-xs text-white/40 mb-2">
-                Kompletność dokumentacji
-              </div>
+              <div className="text-xs text-white/40 mb-2">{card.docCompletenessLabel}</div>
               <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
                 <div
                   className="h-full rounded-full bg-gradient-to-r from-mid-teal to-lime"
@@ -129,9 +131,7 @@ export function Hero({
             </div>
 
             <div className="pt-2">
-              <div className="text-xs text-white/40 mb-2">
-                Szanse wygranej (ML)
-              </div>
+              <div className="text-xs text-white/40 mb-2">{card.winChanceLabel}</div>
               <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
                 <div
                   className="h-full rounded-full bg-gradient-to-r from-mid-teal to-lime"

@@ -9,6 +9,9 @@ interface CostCalculatorProps {
   fields: { label: string; key: string; defaultValue: number }[];
   totalLabel: string;
   resetLabel: string;
+  localeTag?: string;
+  currencyCode?: string;
+  currencySuffix?: string;
 }
 
 export function CostCalculator({
@@ -16,6 +19,9 @@ export function CostCalculator({
   fields,
   totalLabel,
   resetLabel,
+  localeTag = "pl-PL",
+  currencyCode = "PLN",
+  currencySuffix = "zł",
 }: CostCalculatorProps) {
   const [values, setValues] = useState<Record<string, number>>(() =>
     Object.fromEntries(fields.map((f) => [f.key, f.defaultValue]))
@@ -33,9 +39,9 @@ export function CostCalculator({
   }, [fields]);
 
   const formatPLN = (n: number) =>
-    n.toLocaleString("pl-PL", {
+    n.toLocaleString(localeTag, {
       style: "currency",
-      currency: "PLN",
+      currency: currencyCode,
       minimumFractionDigits: 0,
     });
 
@@ -64,14 +70,14 @@ export function CostCalculator({
                       <input
                         type="text"
                         inputMode="numeric"
-                        value={(values[field.key] ?? 0).toLocaleString("pl-PL")}
+                        value={(values[field.key] ?? 0).toLocaleString(localeTag)}
                         onChange={(e) =>
                           handleChange(field.key, e.target.value)
                         }
                         className="w-full px-4 py-3 rounded-lg border border-light-gray text-text-dark font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-mid-teal/40 focus:border-mid-teal transition-colors"
                       />
                       <span className="absolute right-4 top-1/2 -translate-y-1/2 text-text-mid text-sm">
-                        zł
+                        {currencySuffix}
                       </span>
                     </div>
                   </div>

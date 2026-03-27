@@ -23,6 +23,10 @@ interface CTAProps {
     sending: string;
     thankYouTitle: string;
     thankYouMessage: string;
+    errorTitle: string;
+    errorMessageBeforeEmail: string;
+    errorMessageAfterEmail: string;
+    backToForm: string;
   };
   bottomNote: string;
 }
@@ -143,24 +147,24 @@ export function CTA({
               ) : formState === "error" ? (
                 <div className="text-center py-8">
                   <h3 className="text-white text-lg font-bold mb-2">
-                    Nie udało się wysłać wiadomości
+                    {formLabels.errorTitle}
                   </h3>
                   <p className="text-white/70 text-sm mb-5">
-                    Spróbuj ponownie za chwilę albo napisz bezpośrednio na{" "}
+                    {formLabels.errorMessageBeforeEmail}
                     <a
                       href={`mailto:${emailAddress}`}
                       className="text-lime hover:text-lime-dark transition-colors"
                     >
                       {emailAddress}
                     </a>
-                    .
+                    {formLabels.errorMessageAfterEmail}
                   </p>
                   <button
                     type="button"
                     onClick={() => setFormState("idle")}
                     className="inline-flex items-center justify-center rounded-lg bg-lime px-5 py-3 text-sm font-bold text-text-dark transition-colors hover:bg-lime-dark"
                   >
-                    Wróć do formularza
+                    {formLabels.backToForm}
                   </button>
                 </div>
               ) : (
