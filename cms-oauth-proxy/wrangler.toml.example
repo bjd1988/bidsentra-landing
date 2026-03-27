@@ -1,0 +1,11 @@
+#:schema node_modules/wrangler/config-schema.json
+
+name = "bidsentra-decap-proxy"
+main = "src/index.ts"
+compatibility_date = "2025-11-17"
+
+# Optional: replace with your custom domain if you want the proxy at a domain you own.
+# route = { pattern = "decap.example.com", zone_name = "example.com", custom_domain = true }
+
+[vars]
+GITHUB_REPO_PRIVATE = "0"
