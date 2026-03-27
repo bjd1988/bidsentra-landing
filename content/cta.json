@@ -9,7 +9,7 @@
   ],
   "emailButtonText": "Umów rozmowę",
   "emailAddress": "info@bidsentra.pl",
-  "tallyFormUrl": "https://tally.so/r/xX214r",
+  "formEndpoint": "https://bidsentra-contact-form.145884.workers.dev",
   "formLabels": {
     "name": "Imię i Nazwisko",
     "namePlaceholder": "Jan Kowalski",

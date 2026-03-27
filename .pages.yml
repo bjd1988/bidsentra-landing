@@ -525,8 +525,8 @@ content:
       - name: emailAddress
         label: Adres email
         type: string
-      - name: tallyFormUrl
-        label: Link formularza Tally
+      - name: formEndpoint
+        label: Endpoint formularza
         type: string
         required: false
       - name: formLabels

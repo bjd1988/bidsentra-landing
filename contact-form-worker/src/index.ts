@@ -1,0 +1,147 @@
+interface Env {
+  BREVO_API_KEY: string;
+  BREVO_SENDER_NAME: string;
+  BREVO_SENDER_EMAIL: string;
+  BREVO_RECEIVER_EMAIL: string;
+  ALLOWED_ORIGINS: string;
+}
+
+function getAllowedOrigin(origin: string | null, env: Env) {
+  if (!origin) return null;
+
+  const allowedOrigins = env.ALLOWED_ORIGINS.split(",").map((item) =>
+    item.trim()
+  );
+
+  return allowedOrigins.includes(origin) ? origin : null;
+}
+
+function corsHeaders(origin: string | null, env: Env) {
+  const allowedOrigin = getAllowedOrigin(origin, env);
+
+  return {
+    "Access-Control-Allow-Origin": allowedOrigin ?? "https://bjd1988.github.io",
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+    Vary: "Origin",
+  };
+}
+
+function jsonResponse(
+  body: Record<string, string>,
+  status: number,
+  origin: string | null,
+  env: Env
+) {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: {
+      "Content-Type": "application/json",
+      ...corsHeaders(origin, env),
+    },
+  });
+}
+
+function escapeHtml(input: string) {
+  return input
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+export default {
+  async fetch(request: Request, env: Env): Promise<Response> {
+    const origin = request.headers.get("Origin");
+
+    if (request.method === "OPTIONS") {
+      return new Response(null, {
+        status: 204,
+        headers: corsHeaders(origin, env),
+      });
+    }
+
+    if (request.method !== "POST") {
+      return jsonResponse(
+        { error: "Method not allowed" },
+        405,
+        origin,
+        env
+      );
+    }
+
+    if (!getAllowedOrigin(origin, env) && origin !== null) {
+      return jsonResponse({ error: "Origin not allowed" }, 403, origin, env);
+    }
+
+    const formData = await request.formData();
+    const name = String(formData.get("name") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+
+    if (!name || !email || !message) {
+      return jsonResponse(
+        { error: "Missing required fields" },
+        400,
+        origin,
+        env
+      );
+    }
+
+    const htmlContent = `
+      <h2>Nowa wiadomość z formularza BidSentra</h2>
+      <p><strong>Imię i nazwisko:</strong> ${escapeHtml(name)}</p>
+      <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+      <p><strong>Wiadomość:</strong></p>
+      <p>${escapeHtml(message).replaceAll("\n", "<br />")}</p>
+    `;
+
+    const textContent = [
+      "Nowa wiadomość z formularza BidSentra",
+      "",
+      `Imię i nazwisko: ${name}`,
+      `Email: ${email}`,
+      "",
+      "Wiadomość:",
+      message,
+    ].join("\n");
+
+    const brevoResponse = await fetch("https://api.brevo.com/v3/smtp/email", {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "api-key": env.BREVO_API_KEY,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        sender: {
+          name: env.BREVO_SENDER_NAME,
+          email: env.BREVO_SENDER_EMAIL,
+        },
+        to: [{ email: env.BREVO_RECEIVER_EMAIL }],
+        replyTo: {
+          email,
+          name,
+        },
+        subject: "Nowa wiadomość z formularza BidSentra",
+        htmlContent,
+        textContent,
+      }),
+    });
+
+    if (!brevoResponse.ok) {
+      const errorText = await brevoResponse.text();
+      console.error("Brevo error:", errorText);
+
+      return jsonResponse(
+        { error: "Email delivery failed" },
+        502,
+        origin,
+        env
+      );
+    }
+
+    return jsonResponse({ status: "ok" }, 200, origin, env);
+  },
+};

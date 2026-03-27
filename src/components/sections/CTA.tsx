@@ -1,6 +1,7 @@
 "use client";
 
-import { CheckCircle } from "lucide-react";
+import { useState } from "react";
+import { CheckCircle, Send, Loader2 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 interface CTAProps {
@@ -10,7 +11,7 @@ interface CTAProps {
   trustBadges: string[];
   emailButtonText: string;
   emailAddress: string;
-  tallyFormUrl?: string;
+  formEndpoint?: string;
   formLabels: {
     name: string;
     namePlaceholder: string;
@@ -33,21 +34,44 @@ export function CTA({
   trustBadges,
   emailButtonText,
   emailAddress,
-  tallyFormUrl,
+  formEndpoint,
   formLabels,
   bottomNote,
 }: CTAProps) {
-  const normalizedTallyUrl = tallyFormUrl?.trim();
-  const hasTallyEmbed = Boolean(normalizedTallyUrl);
-  const tallyEmbedUrl = normalizedTallyUrl
-    ? normalizedTallyUrl
-        .replace("://tally.so/r/", "://tally.so/embed/")
-        .concat(
-          normalizedTallyUrl.includes("?")
-            ? "&transparentBackground=1&dynamicHeight=1"
-            : "?transparentBackground=1&dynamicHeight=1"
-        )
-    : "";
+  const [formState, setFormState] = useState<
+    "idle" | "sending" | "sent" | "error"
+  >("idle");
+  const normalizedEndpoint = formEndpoint?.trim();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!normalizedEndpoint) {
+      setFormState("error");
+      return;
+    }
+
+    setFormState("sending");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(normalizedEndpoint, {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      setFormState("sent");
+      form.reset();
+    } catch {
+      setFormState("error");
+    }
+  };
 
   return (
     <section
@@ -101,33 +125,98 @@ export function CTA({
           {/* Right: Contact form */}
           <FadeIn delay={0.15}>
             <div className="bg-white/10 border border-white/15 rounded-2xl p-7 backdrop-blur-sm">
-              {hasTallyEmbed ? (
-                <div className="overflow-hidden rounded-xl bg-white">
-                  <iframe
-                    src={tallyEmbedUrl}
-                    title="Formularz kontaktowy BidSentra"
-                    className="h-[640px] w-full border-0"
-                    loading="lazy"
+              {formState === "sent" ? (
+                <div className="text-center py-8">
+                  <CheckCircle
+                    size={48}
+                    className="text-lime mx-auto mb-4"
                   />
+                  <h3 className="text-white text-lg font-bold mb-2">
+                    {formLabels.thankYouTitle}
+                  </h3>
+                  <p className="text-white/70 text-sm">
+                    {formLabels.thankYouMessage}
+                  </p>
+                </div>
+              ) : formState === "error" ? (
+                <div className="text-center py-8">
+                  <h3 className="text-white text-lg font-bold mb-2">
+                    Nie udało się wysłać wiadomości
+                  </h3>
+                  <p className="text-white/70 text-sm mb-5">
+                    Spróbuj ponownie za chwilę albo napisz bezpośrednio na{" "}
+                    <a
+                      href={`mailto:${emailAddress}`}
+                      className="text-lime hover:text-lime-dark transition-colors"
+                    >
+                      {emailAddress}
+                    </a>
+                    .
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setFormState("idle")}
+                    className="inline-flex items-center justify-center rounded-lg bg-lime px-5 py-3 text-sm font-bold text-text-dark transition-colors hover:bg-lime-dark"
+                  >
+                    Wróć do formularza
+                  </button>
                 </div>
               ) : (
-                <div className="flex min-h-[640px] flex-col items-center justify-center text-center">
-                  <CheckCircle size={48} className="mx-auto mb-4 text-lime" />
-                  <h3 className="mb-2 text-lg font-bold text-white">
-                    Formularz Tally jest gotowy do podpięcia
-                  </h3>
-                  <p className="max-w-md text-sm text-white/70">
-                    Wklej opublikowany link formularza Tally w ustawieniu
-                    `tallyFormUrl`, a ta sekcja automatycznie pokaże osadzony
-                    formularz.
-                  </p>
-                  <a
-                    href={`mailto:${emailAddress}`}
-                    className="mt-6 inline-flex items-center gap-2 rounded-lg bg-lime px-6 py-3 text-sm font-bold text-text-dark transition-colors hover:bg-lime-dark"
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label className="text-xs text-white/60 font-medium block mb-1.5">
+                      {formLabels.name}
+                    </label>
+                    <input
+                      name="name"
+                      type="text"
+                      required
+                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/30 text-sm focus:outline-none focus:ring-2 focus:ring-mid-teal/50 focus:border-mid-teal transition-colors"
+                      placeholder={formLabels.namePlaceholder}
+                    />
+                  </div>
+                  <div>
+                    <label className="text-xs text-white/60 font-medium block mb-1.5">
+                      {formLabels.email}
+                    </label>
+                    <input
+                      name="email"
+                      type="email"
+                      required
+                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/30 text-sm focus:outline-none focus:ring-2 focus:ring-mid-teal/50 focus:border-mid-teal transition-colors"
+                      placeholder={formLabels.emailPlaceholder}
+                    />
+                  </div>
+                  <div>
+                    <label className="text-xs text-white/60 font-medium block mb-1.5">
+                      {formLabels.message}
+                    </label>
+                    <textarea
+                      name="message"
+                      rows={4}
+                      required
+                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/30 text-sm focus:outline-none focus:ring-2 focus:ring-mid-teal/50 focus:border-mid-teal transition-colors resize-none"
+                      placeholder={formLabels.messagePlaceholder}
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={formState === "sending"}
+                    className="w-full bg-lime text-text-dark py-3.5 rounded-lg font-bold text-sm hover:bg-lime-dark transition-colors flex items-center justify-center gap-2 disabled:opacity-60 cursor-pointer"
                   >
-                    Napisz na {emailAddress}
-                  </a>
-                </div>
+                    {formState === "sending" ? (
+                      <>
+                        <Loader2 size={16} className="animate-spin" />
+                        {formLabels.sending}
+                      </>
+                    ) : (
+                      <>
+                        <Send size={16} />
+                        {formLabels.submit}
+                      </>
+                    )}
+                  </button>
+                </form>
               )}
             </div>
           </FadeIn>
