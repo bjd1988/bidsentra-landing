@@ -31,7 +31,7 @@ export function Header({ logo, navLinks, ctaButtonText }: HeaderProps) {
     >
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between">
         <a
-          href="#"
+          href={withBasePath("/")}
           className="flex items-center rounded-2xl bg-white/8 px-2 py-1.5 md:px-2.5 md:py-2 ring-1 ring-white/12 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.01] hover:bg-white/10"
         >
           <div className="w-[190px] h-11 md:w-[340px] md:h-[68px] overflow-hidden rounded-xl">
@@ -51,14 +51,14 @@ export function Header({ logo, navLinks, ctaButtonText }: HeaderProps) {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={withBasePath(link.href)}
               className="text-white/80 hover:text-lime text-sm font-medium transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="#kontakt"
+            href={withBasePath("/#kontakt")}
             className="bg-lime text-text-dark px-5 py-2.5 rounded-lg font-bold text-sm hover:bg-lime-dark transition-colors"
           >
             {ctaButtonText}
@@ -81,7 +81,7 @@ export function Header({ logo, navLinks, ctaButtonText }: HeaderProps) {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={withBasePath(link.href)}
               onClick={() => setMobileOpen(false)}
               className="block py-3 text-white/80 hover:text-lime text-sm font-medium transition-colors"
             >
@@ -89,7 +89,7 @@ export function Header({ logo, navLinks, ctaButtonText }: HeaderProps) {
             </a>
           ))}
           <a
-            href="#kontakt"
+            href={withBasePath("/#kontakt")}
             onClick={() => setMobileOpen(false)}
             className="block mt-3 bg-lime text-text-dark px-5 py-2.5 rounded-lg font-bold text-sm text-center hover:bg-lime-dark transition-colors"
           >

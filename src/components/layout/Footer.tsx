@@ -47,7 +47,7 @@ export function Footer({
                 {col.links.map((link) => (
                   <li key={link.label}>
                     <a
-                      href={link.href}
+                      href={withBasePath(link.href)}
                       className="text-sm text-white/60 hover:text-lime transition-colors"
                     >
                       {link.label}
