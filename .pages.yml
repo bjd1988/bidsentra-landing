@@ -1,0 +1,536 @@
+media:
+  input: public/images
+  output: /images
+  path: ""
+  extensions: [png, jpg, jpeg, webp, svg]
+
+components:
+  nav_link:
+    label: Link
+    type: object
+    fields:
+      - name: href
+        label: URL / anchor
+        type: string
+      - name: label
+        label: Etykieta
+        type: string
+  footer_column:
+    label: Kolumna stopki
+    type: object
+    fields:
+      - name: title
+        label: Tytuł
+        type: string
+      - name: links
+        label: Linki
+        component: nav_link
+        list: true
+  label_value:
+    label: Wiersz
+    type: object
+    fields:
+      - name: label
+        label: Etykieta
+        type: string
+      - name: value
+        label: Wartość
+        type: string
+  title_desc_num:
+    label: Element z numerem
+    type: object
+    fields:
+      - name: num
+        label: Numer
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: desc
+        label: Opis
+        type: text
+  icon_title_desc:
+    label: Element z ikoną
+    type: object
+    fields:
+      - name: icon
+        label: Ikona
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: desc
+        label: Opis
+        type: text
+  faq_item:
+    label: Pytanie i odpowiedź
+    type: object
+    fields:
+      - name: q
+        label: Pytanie
+        type: string
+      - name: a
+        label: Odpowiedź
+        type: text
+  testimonial:
+    label: Referencja
+    type: object
+    fields:
+      - name: quote
+        label: Cytat
+        type: text
+      - name: name
+        label: Imię i nazwisko
+        type: string
+      - name: role
+        label: Stanowisko
+        type: string
+      - name: company
+        label: Firma
+        type: string
+  form_labels:
+    label: Etykiety formularza
+    type: object
+    fields:
+      - name: name
+        label: "Etykieta: imię"
+        type: string
+      - name: namePlaceholder
+        label: "Placeholder: imię"
+        type: string
+      - name: email
+        label: "Etykieta: email"
+        type: string
+      - name: emailPlaceholder
+        label: "Placeholder: email"
+        type: string
+      - name: message
+        label: "Etykieta: wiadomość"
+        type: string
+      - name: messagePlaceholder
+        label: "Placeholder: wiadomość"
+        type: string
+      - name: submit
+        label: "Przycisk: wyślij"
+        type: string
+      - name: sending
+        label: "Tekst: wysyłanie"
+        type: string
+      - name: thankYouTitle
+        label: Tytuł podziękowania
+        type: string
+      - name: thankYouMessage
+        label: Treść podziękowania
+        type: string
+
+content:
+  - name: site
+    label: Strona / Header / Footer
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: siteName
+        label: Nazwa strony
+        type: string
+      - name: logo
+        label: Logo w nagłówku
+        type: image
+      - name: logoWhite
+        label: Logo w stopce
+        type: image
+      - name: navLinks
+        label: Linki nawigacji
+        component: nav_link
+        list: true
+      - name: ctaButtonText
+        label: Tekst przycisku w headerze
+        type: string
+      - name: footerDescription
+        label: Opis w stopce
+        type: text
+      - name: footerCopyright
+        label: Copyright
+        type: string
+      - name: footerUrl
+        label: Adres URL w stopce
+        type: string
+      - name: footerColumns
+        label: Kolumny stopki
+        component: footer_column
+        list: true
+
+  - name: hero
+    label: Hero
+    type: file
+    path: content/hero.json
+    format: json
+    fields:
+      - name: badge
+        label: Badge
+        type: string
+      - name: titleWhite
+        label: Tytuł biały
+        type: string
+      - name: titleHighlight
+        label: Tytuł wyróżniony
+        type: string
+      - name: description
+        label: Opis
+        type: text
+      - name: ctaPrimary
+        label: Główny CTA
+        type: string
+      - name: ctaSecondary
+        label: Drugi CTA
+        type: string
+      - name: card
+        label: Karta demo
+        type: object
+        fields:
+          - name: title
+            label: Tytuł karty
+            type: string
+          - name: rows
+            label: Wiersze
+            component: label_value
+            list: true
+          - name: bidScore
+            label: Bid Score
+            type: string
+          - name: pzpCompliance
+            label: Zgodność z PZP
+            type: string
+          - name: docCompleteness
+            label: Kompletność dokumentów
+            type: number
+          - name: winChance
+            label: Szansa wygranej
+            type: number
+
+  - name: stats
+    label: Statystyki
+    type: file
+    path: content/stats.json
+    format: json
+    fields:
+      - name: items
+        label: Pozycje
+        component: label_value
+        list: true
+
+  - name: cost_calculator
+    label: Kalkulator kosztów
+    type: file
+    path: content/cost-calculator.json
+    format: json
+    fields:
+      - name: title
+        label: Tytuł
+        type: string
+      - name: fields
+        label: Pola kalkulatora
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Etykieta
+            type: string
+          - name: key
+            label: Klucz
+            type: string
+          - name: defaultValue
+            label: Wartość domyślna
+            type: number
+      - name: totalLabel
+        label: Etykieta sumy
+        type: string
+      - name: resetLabel
+        label: Etykieta resetu
+        type: string
+
+  - name: problem
+    label: Problem
+    type: file
+    path: content/problem.json
+    format: json
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: subtitle
+        label: Podtytuł
+        type: text
+      - name: traditionalLabel
+        label: Etykieta tradycyjnego procesu
+        type: string
+      - name: bidsentraLabel
+        label: Etykieta BidSentra
+        type: string
+      - name: painPoints
+        label: Problemy
+        component: icon_title_desc
+        list: true
+      - name: solutions
+        label: Rozwiązania
+        type: string
+        list: true
+      - name: marketStats
+        label: Statystyki rynkowe
+        type: object
+        list: true
+        fields:
+          - name: val
+            label: Wartość
+            type: string
+          - name: lbl
+            label: Opis
+            type: string
+
+  - name: how_it_works
+    label: Jak to działa
+    type: file
+    path: content/how-it-works.json
+    format: json
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: subtitle
+        label: Podtytuł
+        type: text
+      - name: steps
+        label: Kroki
+        type: object
+        list: true
+        fields:
+          - name: num
+            label: Numer
+            type: string
+          - name: icon
+            label: Ikona
+            type: string
+          - name: title
+            label: Tytuł
+            type: string
+          - name: desc
+            label: Opis
+            type: text
+
+  - name: features
+    label: Funkcjonalności
+    type: file
+    path: content/features.json
+    format: json
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: subtitle
+        label: Podtytuł
+        type: text
+      - name: items
+        label: Funkcje
+        type: object
+        list: true
+        fields:
+          - name: icon
+            label: Ikona
+            type: string
+          - name: title
+            label: Tytuł
+            type: string
+          - name: desc
+            label: Opis
+            type: text
+          - name: tag
+            label: Tag
+            type: string
+
+  - name: benefits
+    label: Korzyści
+    type: file
+    path: content/benefits.json
+    format: json
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: items
+        label: Korzyści
+        component: title_desc_num
+        list: true
+      - name: kpisLabel
+        label: Etykieta KPI
+        type: string
+      - name: kpis
+        label: KPI
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Etykieta
+            type: string
+          - name: value
+            label: Wartość
+            type: string
+          - name: pct
+            label: Procent
+            type: number
+      - name: quote
+        label: Cytat
+        type: text
+
+  - name: industries
+    label: Sektory
+    type: file
+    path: content/industries.json
+    format: json
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: subtitle
+        label: Podtytuł
+        type: text
+      - name: items
+        label: Branże
+        component: icon_title_desc
+        list: true
+      - name: quoteText
+        label: Cytat
+        type: text
+      - name: quoteAuthor
+        label: Autor cytatu
+        type: string
+
+  - name: testimonials
+    label: Referencje
+    type: file
+    path: content/testimonials.json
+    format: json
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: disclaimer
+        label: Disclaimer
+        type: string
+      - name: items
+        label: Referencje
+        component: testimonial
+        list: true
+
+  - name: pricing
+    label: Cennik
+    type: file
+    path: content/pricing.json
+    format: json
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: subtitle
+        label: Podtytuł
+        type: string
+      - name: plans
+        label: Plany
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Nazwa
+            type: string
+          - name: target
+            label: Dla kogo
+            type: string
+          - name: featured
+            label: Wyróżniony
+            type: boolean
+          - name: badge
+            label: Badge
+            type: string
+            required: false
+          - name: features
+            label: Cechy
+            type: string
+            list: true
+          - name: cta
+            label: CTA
+            type: string
+
+  - name: faq
+    label: FAQ
+    type: file
+    path: content/faq.json
+    format: json
+    fields:
+      - name: sectionLabel
+        label: Etykieta sekcji
+        type: string
+      - name: title
+        label: Tytuł
+        type: string
+      - name: subtitle
+        label: Podtytuł
+        type: string
+      - name: items
+        label: Pytania
+        component: faq_item
+        list: true
+
+  - name: cta
+    label: Kontakt / CTA
+    type: file
+    path: content/cta.json
+    format: json
+    fields:
+      - name: title
+        label: Tytuł
+        type: string
+      - name: titleHighlight
+        label: Tytuł wyróżniony
+        type: string
+      - name: description
+        label: Opis
+        type: text
+      - name: trustBadges
+        label: Trust badges
+        type: string
+        list: true
+      - name: emailButtonText
+        label: Tekst przycisku email
+        type: string
+      - name: emailAddress
+        label: Adres email
+        type: string
+      - name: tallyFormUrl
+        label: Link formularza Tally
+        type: string
+        required: false
+      - name: formLabels
+        component: form_labels
+      - name: bottomNote
+        label: Notatka na dole
+        type: string
