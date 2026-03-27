@@ -1,6 +1,7 @@
 {
   "siteName": "BidSentra",
   "logo": "/images/logo-inverse.png",
+  "logoWhite": "/images/logo-inverse.png",
   "navLinks": [
     {
       "href": "#jak-dziala",

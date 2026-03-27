@@ -45,12 +45,19 @@ export default async function Home() {
     loadContent("cta"),
   ]);
 
+  const siteContent = site as Record<string, unknown>;
+  const headerLogo = (siteContent.logo as string) || "/images/logo-inverse.png";
+  const footerLogo =
+    (siteContent.logoWhite as string) ||
+    (siteContent.logo as string) ||
+    "/images/logo-inverse.png";
+
   return (
     <>
       <Header
-        logo={site.logo as string}
-        navLinks={site.navLinks as { href: string; label: string }[]}
-        ctaButtonText={site.ctaButtonText as string}
+        logo={headerLogo}
+        navLinks={siteContent.navLinks as { href: string; label: string }[]}
+        ctaButtonText={siteContent.ctaButtonText as string}
       />
       <main>
         <Hero {...(hero as any)} />
@@ -67,11 +74,11 @@ export default async function Home() {
         <CTA {...(cta as any)} />
       </main>
       <Footer
-        logoWhite={site.logoWhite as string}
-        footerDescription={site.footerDescription as string}
-        footerCopyright={site.footerCopyright as string}
-        footerUrl={site.footerUrl as string}
-        footerColumns={site.footerColumns as any}
+        logoWhite={footerLogo}
+        footerDescription={siteContent.footerDescription as string}
+        footerCopyright={siteContent.footerCopyright as string}
+        footerUrl={siteContent.footerUrl as string}
+        footerColumns={siteContent.footerColumns as any}
       />
     </>
   );
