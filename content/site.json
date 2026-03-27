@@ -1,12 +1,23 @@
 {
   "siteName": "BidSentra",
   "logo": "/images/logo-inverse.png",
-  "logoWhite": "/images/logo-inverse.png",
   "navLinks": [
-    { "href": "#jak-dziala", "label": "Jak to działa" },
-    { "href": "#korzysci", "label": "Co zyskujesz" },
-    { "href": "#cennik", "label": "Cennik" },
-    { "href": "#faq", "label": "FAQ" }
+    {
+      "href": "#jak-dziala",
+      "label": "Jak to działa"
+    },
+    {
+      "href": "#korzysci",
+      "label": "Co zyskujesz"
+    },
+    {
+      "href": "#cennik",
+      "label": "Cennik"
+    },
+    {
+      "href": "#faq",
+      "label": "FAQ"
+    }
   ],
   "ctaButtonText": "Zamów teraz",
   "footerDescription": "Your central hub for smarter bidding. AI-powered B2B procurement automation dla polskiego rynku.",
@@ -16,28 +27,64 @@
     {
       "title": "PRODUKT",
       "links": [
-        { "label": "Jak to działa", "href": "#jak-dziala" },
-        { "label": "Co zyskujesz", "href": "#korzysci" },
-        { "label": "Cennik", "href": "#cennik" },
-        { "label": "FAQ", "href": "#faq" }
+        {
+          "href": "#jak-dziala",
+          "label": "Jak to działa"
+        },
+        {
+          "href": "#korzysci",
+          "label": "Co zyskujesz"
+        },
+        {
+          "href": "#cennik",
+          "label": "Cennik"
+        },
+        {
+          "href": "#faq",
+          "label": "FAQ"
+        }
       ]
     },
     {
       "title": "SEKTORY",
       "links": [
-        { "label": "Budownictwo i inżynieria", "href": "#sektory" },
-        { "label": "Technologie IT", "href": "#sektory" },
-        { "label": "Energetyka i OZE", "href": "#sektory" },
-        { "label": "Doradztwo przetargowe", "href": "#sektory" }
+        {
+          "href": "#sektory",
+          "label": "Budownictwo i inżynieria"
+        },
+        {
+          "href": "#sektory",
+          "label": "Technologie IT"
+        },
+        {
+          "href": "#sektory",
+          "label": "Energetyka i OZE"
+        },
+        {
+          "href": "#sektory",
+          "label": "Doradztwo przetargowe"
+        }
       ]
     },
     {
       "title": "FIRMA",
       "links": [
-        { "label": "Kontakt", "href": "#kontakt" },
-        { "label": "Polityka prywatności", "href": "#" },
-        { "label": "Regulamin", "href": "#" },
-        { "label": "Publikacje", "href": "#" }
+        {
+          "href": "#kontakt",
+          "label": "Kontakt"
+        },
+        {
+          "href": "#",
+          "label": "Polityka prywatności"
+        },
+        {
+          "href": "#",
+          "label": "Regulamin"
+        },
+        {
+          "href": "#",
+          "label": "Publikacje"
+        }
       ]
     }
   ]
