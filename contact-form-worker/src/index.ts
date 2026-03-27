@@ -6,6 +6,19 @@ interface Env {
   ALLOWED_ORIGINS: string;
 }
 
+const MIN_SUBMIT_DELAY_MS = 2500;
+const MAX_NAME_LENGTH = 120;
+const MAX_MESSAGE_LENGTH = 5000;
+const MIN_MESSAGE_LENGTH = 10;
+
+function isValidEmail(email: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function okResponse(origin: string | null, env: Env) {
+  return jsonResponse({ status: "ok" }, 200, origin, env);
+}
+
 function getAllowedOrigin(origin: string | null, env: Env) {
   if (!origin) return null;
 
@@ -79,10 +92,34 @@ export default {
     const name = String(formData.get("name") ?? "").trim();
     const email = String(formData.get("email") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
+    const website = String(formData.get("website") ?? "").trim();
+    const startedAt = Number(String(formData.get("startedAt") ?? "").trim());
+
+    if (website) {
+      return okResponse(origin, env);
+    }
+
+    if (!Number.isFinite(startedAt) || Date.now() - startedAt < MIN_SUBMIT_DELAY_MS) {
+      return okResponse(origin, env);
+    }
 
     if (!name || !email || !message) {
       return jsonResponse(
         { error: "Missing required fields" },
+        400,
+        origin,
+        env
+      );
+    }
+
+    if (
+      name.length > MAX_NAME_LENGTH ||
+      message.length < MIN_MESSAGE_LENGTH ||
+      message.length > MAX_MESSAGE_LENGTH ||
+      !isValidEmail(email)
+    ) {
+      return jsonResponse(
+        { error: "Validation failed" },
         400,
         origin,
         env
@@ -142,6 +179,6 @@ export default {
       );
     }
 
-    return jsonResponse({ status: "ok" }, 200, origin, env);
+    return okResponse(origin, env);
   },
 };

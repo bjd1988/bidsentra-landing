@@ -42,6 +42,7 @@ export function CTA({
     "idle" | "sending" | "sent" | "error"
   >("idle");
   const normalizedEndpoint = formEndpoint?.trim();
+  const [formStartedAt, setFormStartedAt] = useState(() => Date.now());
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -68,6 +69,7 @@ export function CTA({
 
       setFormState("sent");
       form.reset();
+      setFormStartedAt(Date.now());
     } catch {
       setFormState("error");
     }
@@ -163,6 +165,23 @@ export function CTA({
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  <input
+                    type="hidden"
+                    name="startedAt"
+                    value={String(formStartedAt)}
+                  />
+                  <div className="hidden" aria-hidden="true">
+                    <label>
+                      Website
+                      <input
+                        name="website"
+                        type="text"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        defaultValue=""
+                      />
+                    </label>
+                  </div>
                   <div>
                     <label className="text-xs text-white/60 font-medium block mb-1.5">
                       {formLabels.name}
