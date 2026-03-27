@@ -1,7 +1,7 @@
 {
   "siteName": "BidSentra",
-  "logo": "/images/logo.png",
-  "logoWhite": "/images/logo-white.png",
+  "logo": "/images/logo-inverse.png",
+  "logoWhite": "/images/logo-inverse.png",
   "navLinks": [
     { "href": "#jak-dziala", "label": "Jak to działa" },
     { "href": "#korzysci", "label": "Co zyskujesz" },
