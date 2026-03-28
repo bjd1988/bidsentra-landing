@@ -4,6 +4,7 @@ interface Env {
   BREVO_SENDER_EMAIL: string;
   BREVO_RECEIVER_EMAIL: string;
   ALLOWED_ORIGINS: string;
+  BREVO_AUTOREPLY_TEMPLATE_ID?: string;
 }
 
 // Keep a small timing trap for bots, but avoid dropping fast human submissions.
@@ -63,6 +64,21 @@ function escapeHtml(input: string) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+}
+
+async function sendBrevoEmail(
+  env: Env,
+  payload: Record<string, unknown>
+): Promise<Response> {
+  return fetch("https://api.brevo.com/v3/smtp/email", {
+    method: "POST",
+    headers: {
+      accept: "application/json",
+      "api-key": env.BREVO_API_KEY,
+      "content-type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
 }
 
 export default {
@@ -145,27 +161,19 @@ export default {
       message,
     ].join("\n");
 
-    const brevoResponse = await fetch("https://api.brevo.com/v3/smtp/email", {
-      method: "POST",
-      headers: {
-        accept: "application/json",
-        "api-key": env.BREVO_API_KEY,
-        "content-type": "application/json",
+    const brevoResponse = await sendBrevoEmail(env, {
+      sender: {
+        name: env.BREVO_SENDER_NAME,
+        email: env.BREVO_SENDER_EMAIL,
       },
-      body: JSON.stringify({
-        sender: {
-          name: env.BREVO_SENDER_NAME,
-          email: env.BREVO_SENDER_EMAIL,
-        },
-        to: [{ email: env.BREVO_RECEIVER_EMAIL }],
-        replyTo: {
-          email,
-          name,
-        },
-        subject: "Nowa wiadomość z formularza BidSentra",
-        htmlContent,
-        textContent,
-      }),
+      to: [{ email: env.BREVO_RECEIVER_EMAIL }],
+      replyTo: {
+        email,
+        name,
+      },
+      subject: "Nowa wiadomość z formularza BidSentra",
+      htmlContent,
+      textContent,
     });
 
     if (!brevoResponse.ok) {
@@ -178,6 +186,32 @@ export default {
         origin,
         env
       );
+    }
+
+    const autoreplyTemplateId = Number(env.BREVO_AUTOREPLY_TEMPLATE_ID ?? "");
+
+    if (Number.isFinite(autoreplyTemplateId) && autoreplyTemplateId > 0) {
+      const autoreplyResponse = await sendBrevoEmail(env, {
+        sender: {
+          name: env.BREVO_SENDER_NAME,
+          email: env.BREVO_SENDER_EMAIL,
+        },
+        to: [{ email, name }],
+        replyTo: {
+          email: env.BREVO_RECEIVER_EMAIL,
+          name: env.BREVO_SENDER_NAME,
+        },
+        templateId: autoreplyTemplateId,
+        params: {
+          firstName: name,
+          receiverEmail: env.BREVO_RECEIVER_EMAIL,
+        },
+      });
+
+      if (!autoreplyResponse.ok) {
+        const errorText = await autoreplyResponse.text();
+        console.error("Brevo autoreply error:", errorText);
+      }
     }
 
     return okResponse(origin, env);
