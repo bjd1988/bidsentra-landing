@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirect every www request to the canonical non-www domain.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.bidsentra\.pl$ [NC]
+RewriteRule ^(.*)$ https://bidsentra.pl/$1 [R=301,L]
