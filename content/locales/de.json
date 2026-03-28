@@ -382,8 +382,8 @@
     "emailAddress": "info@bidsentra.pl",
     "formEndpoint": "https://bidsentra-contact-form.145884.workers.dev",
     "formLabels": {
-      "name": "Name",
-      "namePlaceholder": "Max Mustermann",
+      "name": "Vorname",
+      "namePlaceholder": "Max",
       "email": "E-Mail",
       "emailPlaceholder": "max@firma.de",
       "message": "Nachricht",

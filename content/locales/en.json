@@ -382,8 +382,8 @@
     "emailAddress": "info@bidsentra.pl",
     "formEndpoint": "https://bidsentra-contact-form.145884.workers.dev",
     "formLabels": {
-      "name": "Full name",
-      "namePlaceholder": "John Smith",
+      "name": "First name",
+      "namePlaceholder": "John",
       "email": "Email",
       "emailPlaceholder": "john@company.com",
       "message": "Message",

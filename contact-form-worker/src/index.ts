@@ -129,7 +129,7 @@ export default {
 
     const htmlContent = `
       <h2>Nowa wiadomość z formularza BidSentra</h2>
-      <p><strong>Imię i nazwisko:</strong> ${escapeHtml(name)}</p>
+      <p><strong>Imię:</strong> ${escapeHtml(name)}</p>
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
       <p><strong>Wiadomość:</strong></p>
       <p>${escapeHtml(message).replaceAll("\n", "<br />")}</p>
@@ -138,7 +138,7 @@ export default {
     const textContent = [
       "Nowa wiadomość z formularza BidSentra",
       "",
-      `Imię i nazwisko: ${name}`,
+      `Imię: ${name}`,
       `Email: ${email}`,
       "",
       "Wiadomość:",
