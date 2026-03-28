@@ -6,7 +6,8 @@ interface Env {
   ALLOWED_ORIGINS: string;
 }
 
-const MIN_SUBMIT_DELAY_MS = 2500;
+// Keep a small timing trap for bots, but avoid dropping fast human submissions.
+const MIN_SUBMIT_DELAY_MS = 800;
 const MAX_NAME_LENGTH = 120;
 const MAX_MESSAGE_LENGTH = 5000;
 const MIN_MESSAGE_LENGTH = 10;
