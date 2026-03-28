@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:github-pages": "DEPLOY_TARGET=github-pages next build",
+    "build:seohost": "DEPLOY_TARGET=seohost next build",
     "start": "next start",
     "lint": "next lint"
   },
