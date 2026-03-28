@@ -368,8 +368,8 @@
         "a": "Yes. Data is encrypted both in transit and at rest. We follow high security standards aligned with GDPR. Your data is never shared with third parties and is not used to train public AI models."
       },
       {
-        "q": "What happens after the trial period ends?",
-        "a": "After the 14-day free trial you can choose one of our subscription plans or stop using the platform. Your data remains available for export for 30 days after the trial ends."
+        "q": "What happens after booking a demo?",
+        "a": "After you submit your request, we will contact you to arrange a meeting and better understand your needs. During the demo, we will show how BidSentra can support your bidding process and answer your implementation questions."
       }
     ]
   },
@@ -377,7 +377,7 @@
     "title": "Ready to win more",
     "titleHighlight": "tenders?",
     "description": "Book a 30-minute demo and see how BidSentra can transform bid preparation in your company.",
-    "trustBadges": ["NO COMMITMENT", "14-DAY FREE TRIAL", "LOCAL SUPPORT"],
+    "trustBadges": ["NO COMMITMENT", "FAST RESPONSE", "LOCAL SUPPORT"],
     "emailButtonText": "Book a call",
     "emailAddress": "info@bidsentra.pl",
     "formEndpoint": "https://bidsentra-contact-form.145884.workers.dev",
@@ -397,7 +397,7 @@
       "errorMessageAfterEmail": ".",
       "backToForm": "Back to the form"
     },
-    "bottomNote": "No commitment · 14-day free trial · Local support"
+    "bottomNote": "No commitment · Fast response · Local support"
   },
   "privacy": {
     "badge": "Data protection",

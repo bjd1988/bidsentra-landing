@@ -368,8 +368,8 @@
         "a": "Ja. Daten werden bei der Übertragung und im Ruhezustand verschlüsselt. Wir arbeiten nach hohen Sicherheitsstandards im Einklang mit der DSGVO. Ihre Daten werden weder an Dritte weitergegeben noch zum Training öffentlicher KI-Modelle verwendet."
       },
       {
-        "q": "Was passiert nach dem Ende der Testphase?",
-        "a": "Nach der 14-tägigen kostenlosen Testphase können Sie einen unserer Tarife wählen oder die Nutzung beenden. Ihre Daten bleiben danach noch 30 Tage lang für den Export verfügbar."
+        "q": "Was passiert nach der Demo-Anfrage?",
+        "a": "Nach Ihrer Anfrage kontaktieren wir Sie, um einen Gesprächstermin zu vereinbaren und Ihre Anforderungen besser zu verstehen. In der Demo zeigen wir, wie BidSentra Ihren Angebotsprozess unterstützen kann, und beantworten Ihre Fragen zur Implementierung."
       }
     ]
   },
@@ -377,7 +377,7 @@
     "title": "Bereit, mehr",
     "titleHighlight": "Ausschreibungen zu gewinnen?",
     "description": "Buchen Sie eine 30-minütige Demo und sehen Sie, wie BidSentra die Angebotserstellung in Ihrem Unternehmen transformieren kann.",
-    "trustBadges": ["OHNE VERPFLICHTUNG", "14 TAGE GRATIS", "LOKALER SUPPORT"],
+    "trustBadges": ["OHNE VERPFLICHTUNG", "SCHNELLE ANTWORT", "LOKALER SUPPORT"],
     "emailButtonText": "Gespräch vereinbaren",
     "emailAddress": "info@bidsentra.pl",
     "formEndpoint": "https://bidsentra-contact-form.145884.workers.dev",
@@ -397,7 +397,7 @@
       "errorMessageAfterEmail": ".",
       "backToForm": "Zurück zum Formular"
     },
-    "bottomNote": "Ohne Verpflichtung · 14 Tage gratis · Lokaler Support"
+    "bottomNote": "Ohne Verpflichtung · Schnelle Antwort · Lokaler Support"
   },
   "privacy": {
     "badge": "Datenschutz",
