@@ -28,7 +28,24 @@ function getAllowedOrigin(origin: string | null, env: Env) {
     item.trim()
   );
 
-  return allowedOrigins.includes(origin) ? origin : null;
+  if (allowedOrigins.includes(origin)) {
+    return origin;
+  }
+
+  try {
+    const originUrl = new URL(origin);
+
+    if (
+      originUrl.hostname === "bidsentra.pl" ||
+      originUrl.hostname === "www.bidsentra.pl"
+    ) {
+      return origin;
+    }
+  } catch {
+    return null;
+  }
+
+  return null;
 }
 
 function corsHeaders(origin: string | null, env: Env) {
