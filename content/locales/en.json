@@ -388,6 +388,7 @@
       "emailPlaceholder": "john@company.com",
       "message": "Message",
       "messagePlaceholder": "How can we help?",
+      "messageHint": "Minimum 3 characters",
       "submit": "Send",
       "sending": "Sending...",
       "thankYouTitle": "Thank you!",

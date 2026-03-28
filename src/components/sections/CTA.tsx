@@ -19,6 +19,7 @@ interface CTAProps {
     emailPlaceholder: string;
     message: string;
     messagePlaceholder: string;
+    messageHint?: string;
     submit: string;
     sending: string;
     thankYouTitle: string;
@@ -42,6 +43,7 @@ export function CTA({
   formLabels,
   bottomNote,
 }: CTAProps) {
+  const minMessageLength = 3;
   const [formState, setFormState] = useState<
     "idle" | "sending" | "sent" | "error"
   >("idle");
@@ -218,9 +220,15 @@ export function CTA({
                       name="message"
                       rows={4}
                       required
+                      minLength={minMessageLength}
                       className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/30 text-sm focus:outline-none focus:ring-2 focus:ring-mid-teal/50 focus:border-mid-teal transition-colors resize-none"
                       placeholder={formLabels.messagePlaceholder}
                     />
+                    {formLabels.messageHint ? (
+                      <p className="mt-1.5 text-xs text-white/45">
+                        {formLabels.messageHint}
+                      </p>
+                    ) : null}
                   </div>
                   <button
                     type="submit"

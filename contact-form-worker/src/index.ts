@@ -11,7 +11,7 @@ interface Env {
 const MIN_SUBMIT_DELAY_MS = 800;
 const MAX_NAME_LENGTH = 120;
 const MAX_MESSAGE_LENGTH = 5000;
-const MIN_MESSAGE_LENGTH = 10;
+const MIN_MESSAGE_LENGTH = 3;
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);

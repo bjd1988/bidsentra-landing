@@ -388,6 +388,7 @@
       "emailPlaceholder": "max@firma.de",
       "message": "Nachricht",
       "messagePlaceholder": "Wobei können wir helfen?",
+      "messageHint": "Mindestens 3 Zeichen",
       "submit": "Senden",
       "sending": "Wird gesendet...",
       "thankYouTitle": "Vielen Dank!",

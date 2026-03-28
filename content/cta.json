@@ -17,6 +17,7 @@
     "emailPlaceholder": "jan@firma.pl",
     "message": "Treść wiadomości",
     "messagePlaceholder": "W czym możemy pomóc?",
+    "messageHint": "Minimum 3 znaki",
     "submit": "Wyślij",
     "sending": "Wysyłanie...",
     "thankYouTitle": "Dziękujemy!",
