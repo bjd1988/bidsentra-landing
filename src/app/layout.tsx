@@ -2,22 +2,33 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "BidSentra – Wygrywaj więcej przetargów z AI",
+  title: "BidSentra AI - system do przetargów i analizy SWZ",
   description:
-    "BidSentra to platforma AI, która automatyzuje analizę dokumentacji przetargowej, generuje oferty zgodne z PZP i ocenia szanse wygranej.",
+    "BidSentra to platforma AI do przetargów i zamówień publicznych. Analizuje SWZ i dokumentację przetargową oraz wspiera przygotowanie ofert przetargowych.",
   keywords: [
-    "przetargi",
-    "PZP",
-    "AI",
-    "automatyzacja",
-    "oferty przetargowe",
     "BidSentra",
+    "BidSentra AI",
+    "BidSentra przetargi",
+    "BidSentra zamówienia publiczne",
+    "system do przetargów",
+    "platforma do analizy przetargów",
+    "narzędzie do przygotowania ofert przetargowych",
+    "AI do przetargów",
+    "AI do zamówień publicznych",
+    "SaaS do przetargów",
+    "oprogramowanie do ofertowania",
+    "system do analizy SWZ",
+    "narzędzie do analizy dokumentacji przetargowej",
+    "platforma dla wykonawców w przetargach",
+    "program do przygotowania oferty przetargowej",
+    "oferty przetargowe",
+    "PZP",
     "zamówienia publiczne",
   ],
   openGraph: {
-    title: "BidSentra – Wygrywaj więcej przetargów z AI",
+    title: "BidSentra AI - system do przetargów i analizy SWZ",
     description:
-      "Platforma AI automatyzująca analizę dokumentacji przetargowej i generowanie ofert zgodnych z PZP.",
+      "Platforma AI do przetargów i zamówień publicznych, analizy SWZ oraz przygotowania ofert przetargowych.",
     type: "website",
     locale: "pl_PL",
     siteName: "BidSentra",
