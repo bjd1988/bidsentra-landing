@@ -14,7 +14,10 @@ import { Stats } from "@/components/sections/Stats";
 import { Testimonials } from "@/components/sections/Testimonials";
 import {
   type LocaleCode,
+  SITE_URL,
+  getAbsoluteUrl,
   getHomeHeaderConfig,
+  getHomePath,
   getPageBundle,
 } from "@/lib/localized-site";
 
@@ -25,9 +28,53 @@ interface LandingPageProps {
 export function LandingPage({ locale }: LandingPageProps) {
   const bundle = getPageBundle(locale);
   const headerConfig = getHomeHeaderConfig(locale);
+  const pageUrl = getAbsoluteUrl(getHomePath(locale));
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        name: "BidSentra",
+        url: SITE_URL,
+        logo: getAbsoluteUrl(bundle.site.logo),
+        email: bundle.cta.emailAddress,
+      },
+      {
+        "@type": "WebSite",
+        name: "BidSentra",
+        url: SITE_URL,
+        inLanguage: locale,
+      },
+      {
+        "@type": "SoftwareApplication",
+        name: "BidSentra",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web",
+        url: pageUrl,
+        inLanguage: locale,
+        description: bundle.hero.description,
+      },
+      {
+        "@type": "FAQPage",
+        inLanguage: locale,
+        mainEntity: bundle.faq.items.map((item) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.a,
+          },
+        })),
+      },
+    ],
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <Header
         logo={bundle.site.logo}
         navLinks={bundle.site.navLinks}

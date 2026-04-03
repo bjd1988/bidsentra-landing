@@ -17,6 +17,8 @@ import enLocale from "../../content/locales/en.json";
 import plPrivacyLocale from "../../content/locales/pl-privacy.json";
 
 export type LocaleCode = "pl" | "en" | "de";
+export const SITE_URL = "https://bidsentra.pl";
+const DEFAULT_OG_IMAGE = "/images/logo.png";
 
 export interface NavLink {
   href: string;
@@ -158,6 +160,23 @@ const POLICY_PATHS: Record<LocaleCode, string> = {
   de: "/de/datenschutz",
 };
 
+function getPagePath(locale: LocaleCode, page: "home" | "privacy") {
+  return page === "home" ? HOME_PATHS[locale] : POLICY_PATHS[locale];
+}
+
+export function getAbsoluteUrl(path: string) {
+  return new URL(path, SITE_URL).toString();
+}
+
+export function getAlternateLanguageUrls(page: "home" | "privacy") {
+  return {
+    pl: getAbsoluteUrl(getPagePath("pl", page)),
+    en: getAbsoluteUrl(getPagePath("en", page)),
+    de: getAbsoluteUrl(getPagePath("de", page)),
+    "x-default": getAbsoluteUrl(getPagePath("pl", page)),
+  };
+}
+
 function buildLanguageLinks(
   currentLocale: LocaleCode,
   page: "home" | "privacy"
@@ -270,23 +289,54 @@ export function getMetadata(
   page: "home" | "privacy"
 ): Metadata {
   const bundle = bundles[locale];
+  const path = getPagePath(locale, page);
   const title =
     page === "home" ? bundle.metadata.homeTitle : bundle.metadata.privacyTitle;
   const description =
     page === "home"
       ? bundle.metadata.homeDescription
       : bundle.metadata.privacyDescription;
+  const absoluteUrl = getAbsoluteUrl(path);
 
   return {
+    metadataBase: new URL(SITE_URL),
     title,
     description,
+    alternates: {
+      canonical: absoluteUrl,
+      languages: getAlternateLanguageUrls(page),
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
     openGraph: {
       title,
       description,
+      url: absoluteUrl,
       type: "website",
       locale:
         locale === "pl" ? "pl_PL" : locale === "en" ? "en_GB" : "de_DE",
       siteName: "BidSentra",
+      images: [
+        {
+          url: getAbsoluteUrl(DEFAULT_OG_IMAGE),
+          alt: "BidSentra",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [getAbsoluteUrl(DEFAULT_OG_IMAGE)],
     },
   };
 }

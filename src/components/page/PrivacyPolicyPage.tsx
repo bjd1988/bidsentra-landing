@@ -2,7 +2,10 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import {
   type LocaleCode,
+  getAbsoluteUrl,
+  getHomePath,
   getPageBundle,
+  getPolicyPath,
   getPrivacyFooterColumns,
   getPrivacyHeaderConfig,
 } from "@/lib/localized-site";
@@ -15,9 +18,31 @@ export function PrivacyPolicyPage({ locale }: PrivacyPolicyPageProps) {
   const bundle = getPageBundle(locale);
   const headerConfig = getPrivacyHeaderConfig(locale);
   const privacy = bundle.privacy;
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "BidSentra",
+        item: getAbsoluteUrl(getHomePath(locale)),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: privacy.title,
+        item: getAbsoluteUrl(getPolicyPath(locale)),
+      },
+    ],
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <Header
         logo={bundle.site.logo}
         navLinks={headerConfig.navLinks}
