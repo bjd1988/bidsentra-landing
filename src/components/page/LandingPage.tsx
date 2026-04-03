@@ -8,6 +8,7 @@ import { Features } from "@/components/sections/Features";
 import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Industries } from "@/components/sections/Industries";
+import { Overview } from "@/components/sections/Overview";
 import { Pricing } from "@/components/sections/Pricing";
 import { Problem } from "@/components/sections/Problem";
 import { Stats } from "@/components/sections/Stats";
@@ -34,6 +35,7 @@ export function LandingPage({ locale }: LandingPageProps) {
     "@graph": [
       {
         "@type": "Organization",
+        "@id": `${SITE_URL}#organization`,
         name: "BidSentra",
         url: SITE_URL,
         logo: getAbsoluteUrl(bundle.site.logo),
@@ -41,21 +43,48 @@ export function LandingPage({ locale }: LandingPageProps) {
       },
       {
         "@type": "WebSite",
+        "@id": `${SITE_URL}#website`,
         name: "BidSentra",
         url: SITE_URL,
         inLanguage: locale,
       },
       {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: bundle.metadata.homeTitle,
+        description: bundle.metadata.homeDescription,
+        inLanguage: locale,
+        isPartOf: {
+          "@id": `${SITE_URL}#website`,
+        },
+        about: [
+          { "@type": "Thing", name: "AI do przetargów" },
+          { "@type": "Thing", name: "analiza SWZ" },
+          { "@type": "Thing", name: "zamówienia publiczne" },
+        ],
+      },
+      {
         "@type": "SoftwareApplication",
+        "@id": `${pageUrl}#software`,
         name: "BidSentra",
         applicationCategory: "BusinessApplication",
+        applicationSubCategory: "Public procurement and tender management software",
         operatingSystem: "Web",
         url: pageUrl,
         inLanguage: locale,
         description: bundle.hero.description,
+        provider: {
+          "@id": `${SITE_URL}#organization`,
+        },
+        featureList: [
+          ...bundle.overview.cards.flatMap((card) => card.points),
+          ...bundle.features.items.map((item) => item.title),
+        ],
       },
       {
         "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
         inLanguage: locale,
         mainEntity: bundle.faq.items.map((item) => ({
           "@type": "Question",
@@ -86,6 +115,7 @@ export function LandingPage({ locale }: LandingPageProps) {
       <main lang={locale}>
         <Hero {...bundle.hero} />
         <Stats items={bundle.stats.items} />
+        <Overview {...bundle.overview} />
         <CostCalculator {...bundle.costCalculator} />
         <Problem {...bundle.problem} />
         <HowItWorks {...bundle.howItWorks} />

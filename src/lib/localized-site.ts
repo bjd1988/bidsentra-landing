@@ -7,6 +7,7 @@ import featuresPl from "../../content/features.json";
 import heroPl from "../../content/hero.json";
 import howItWorksPl from "../../content/how-it-works.json";
 import industriesPl from "../../content/industries.json";
+import overviewPl from "../../content/overview.json";
 import pricingPl from "../../content/pricing.json";
 import problemPl from "../../content/problem.json";
 import sitePl from "../../content/site.json";
@@ -73,6 +74,18 @@ export interface CostCalculatorContent {
   currencySuffix: string;
 }
 
+export interface OverviewContent {
+  sectionLabel: string;
+  title: string;
+  intro: string;
+  cards: {
+    eyebrow: string;
+    title: string;
+    points: string[];
+  }[];
+  bottomLine: string;
+}
+
 export interface CTAContent {
   title: string;
   titleHighlight: string;
@@ -88,6 +101,7 @@ export interface CTAContent {
     emailPlaceholder: string;
     message: string;
     messagePlaceholder: string;
+    messageHint?: string;
     submit: string;
     sending: string;
     thankYouTitle: string;
@@ -128,6 +142,7 @@ export interface PageBundle {
   stats: {
     items: { value: string; label: string }[];
   };
+  overview: OverviewContent;
   costCalculator: CostCalculatorContent;
   problem: typeof problemPl;
   howItWorks: typeof howItWorksPl;
@@ -214,6 +229,7 @@ const plBundle: PageBundle = {
     },
   },
   stats: statsPl,
+  overview: overviewPl,
   costCalculator: {
     ...costCalculatorPl,
     localeTag: "pl-PL",

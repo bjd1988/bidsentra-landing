@@ -80,6 +80,41 @@
       { "value": "+30%", "label": "Höhere Erfolgsquote" }
     ]
   },
+  "overview": {
+    "sectionLabel": "BidSentra auf einen Blick",
+    "title": "Was ist BidSentra?",
+    "intro": "BidSentra ist eine B2B-SaaS-Plattform für Angebotsteams und Auftragnehmer im öffentlichen Beschaffungswesen. Die Plattform hilft dabei, Ausschreibungsunterlagen und Spezifikationen schneller zu analysieren, Angebote vorzubereiten und formale Fehler zu reduzieren.",
+    "cards": [
+      {
+        "eyebrow": "Was es macht",
+        "title": "Analysiert Spezifikationen und Ausschreibungsunterlagen",
+        "points": [
+          "extrahiert zentrale rechtliche, technische und wirtschaftliche Anforderungen",
+          "markiert Lücken, Risiken und Widersprüche in den Unterlagen",
+          "ordnet die Informationen für die Erstellung eines konformen Angebots"
+        ]
+      },
+      {
+        "eyebrow": "Für wen",
+        "title": "Für Angebotsteams, Vertrieb und Bieter",
+        "points": [
+          "für Unternehmen, die an Vergabeverfahren teilnehmen",
+          "für Organisationen mit mehreren Ausschreibungen parallel",
+          "für Teams, die bessere Bid/No-Bid-Entscheidungen brauchen"
+        ]
+      },
+      {
+        "eyebrow": "Wann einsetzen",
+        "title": "Wenn Tempo, Konformität und Konsistenz entscheidend sind",
+        "points": [
+          "wenn die Angebotserstellung zu lange dauert",
+          "wenn die Analyse der Unterlagen viele Beteiligte bindet",
+          "wenn KI-Unterstützung für die Angebotserstellung gebraucht wird"
+        ]
+      }
+    ],
+    "bottomLine": "BidSentra verbindet Ausschreibungsanalyse, Spezifikationsprüfung, Bid Scoring und Unterstützung bei der Angebotserstellung in einer Plattform für B2B-Teams."
+  },
   "costCalculator": {
     "title": "Was kostet Sie eine verlorene Ausschreibung?",
     "fields": [

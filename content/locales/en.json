@@ -80,6 +80,41 @@
       { "value": "+30%", "label": "Higher bid success rate" }
     ]
   },
+  "overview": {
+    "sectionLabel": "BidSentra at a glance",
+    "title": "What is BidSentra?",
+    "intro": "BidSentra is a B2B SaaS platform for tender teams and contractors working with public procurement. It helps teams analyze specifications, review tender documentation, prepare bids faster and reduce formal errors.",
+    "cards": [
+      {
+        "eyebrow": "What it does",
+        "title": "Analyzes tender specifications and documentation",
+        "points": [
+          "extracts key legal, technical and commercial requirements",
+          "flags gaps, risks and inconsistencies in the documents",
+          "organizes the information needed to prepare a compliant bid"
+        ]
+      },
+      {
+        "eyebrow": "Who it is for",
+        "title": "For bid teams, commercial teams and contractors",
+        "points": [
+          "for companies responding to public procurement procedures",
+          "for organizations reviewing multiple opportunities in parallel",
+          "for teams that need better bid / no-bid decisions"
+        ]
+      },
+      {
+        "eyebrow": "When to use it",
+        "title": "When speed, compliance and consistency matter",
+        "points": [
+          "when bid preparation takes too long",
+          "when reviewing specifications requires multiple stakeholders",
+          "when you need AI support for preparing tender bids"
+        ]
+      }
+    ],
+    "bottomLine": "BidSentra combines tender analysis, specification review, bid scoring and bid-preparation support in one platform for B2B procurement teams."
+  },
   "costCalculator": {
     "title": "How much does one lost tender cost you?",
     "fields": [

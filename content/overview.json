@@ -1,0 +1,35 @@
+{
+  "sectionLabel": "BidSentra w skrócie",
+  "title": "Czym jest BidSentra?",
+  "intro": "BidSentra to B2B SaaS i platforma AI do przetargów dla wykonawców startujących w zamówieniach publicznych. System pomaga szybciej analizować SWZ i dokumentację przetargową, przygotowywać oferty oraz ograniczać błędy formalne.",
+  "cards": [
+    {
+      "eyebrow": "Co robi",
+      "title": "Analizuje SWZ i dokumentację przetargową",
+      "points": [
+        "wyciąga kluczowe wymagania formalne, techniczne i finansowe",
+        "wskazuje braki, ryzyka i niespójności w dokumentach",
+        "porządkuje informacje potrzebne do przygotowania oferty"
+      ]
+    },
+    {
+      "eyebrow": "Dla kogo",
+      "title": "Dla zespołów ofertowych, handlowych i wykonawców",
+      "points": [
+        "dla firm przygotowujących oferty w trybach PZP",
+        "dla organizacji analizujących wiele postępowań jednocześnie",
+        "dla wykonawców, którzy chcą podejmować lepsze decyzje bid/no-bid"
+      ]
+    },
+    {
+      "eyebrow": "Kiedy używać",
+      "title": "Gdy liczy się czas, zgodność i skuteczność",
+      "points": [
+        "gdy przygotowanie oferty trwa zbyt długo",
+        "gdy analiza SWZ angażuje wiele osób i jest podatna na błędy",
+        "gdy potrzebne jest narzędzie do przygotowania ofert przetargowych z użyciem AI"
+      ]
+    }
+  ],
+  "bottomLine": "BidSentra łączy analizę przetargów, analizę SWZ, scoring szans i wsparcie przygotowania oferty w jednym narzędziu dla rynku B2B i zamówień publicznych."
+}
