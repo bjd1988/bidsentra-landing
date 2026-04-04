@@ -15,6 +15,7 @@ import { Stats } from "@/components/sections/Stats";
 import { Testimonials } from "@/components/sections/Testimonials";
 import {
   type LocaleCode,
+  ORGANIZATION_LOGO_IMAGE,
   SITE_URL,
   getAbsoluteUrl,
   getHomeHeaderConfig,
@@ -38,7 +39,7 @@ export function LandingPage({ locale }: LandingPageProps) {
         "@id": `${SITE_URL}#organization`,
         name: "BidSentra",
         url: SITE_URL,
-        logo: getAbsoluteUrl(bundle.site.logo),
+        logo: getAbsoluteUrl(ORGANIZATION_LOGO_IMAGE),
         email: bundle.cta.emailAddress,
       },
       {

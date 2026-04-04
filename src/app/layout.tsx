@@ -5,6 +5,22 @@ export const metadata: Metadata = {
   title: "BidSentra AI - system do przetargów i analizy SWZ",
   description:
     "BidSentra to platforma AI do przetargów i zamówień publicznych. Analizuje SWZ i dokumentację przetargową oraz wspiera przygotowanie ofert przetargowych.",
+  icons: {
+    icon: [
+      {
+        url: "/favicon-96.png",
+        type: "image/png",
+        sizes: "96x96",
+      },
+    ],
+    apple: [
+      {
+        url: "/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+  },
   keywords: [
     "BidSentra",
     "BidSentra AI",

@@ -20,6 +20,7 @@ import plPrivacyLocale from "../../content/locales/pl-privacy.json";
 export type LocaleCode = "pl" | "en" | "de";
 export const SITE_URL = "https://bidsentra.pl";
 const DEFAULT_OG_IMAGE = "/images/logo.png";
+export const ORGANIZATION_LOGO_IMAGE = "/images/logo-symbol-square.png";
 
 export interface NavLink {
   href: string;
